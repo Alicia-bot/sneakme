@@ -17,6 +17,20 @@ p {
     font-family: "MyHelvetica";
 }
 
+.btn {
+    border: 0;
+    padding: 10px 30px;
+    margin: 5px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #006FB8;
+    border-radius: 20px;
+}
+
+section {
+    padding: 2em 5em;
+}
+
 .navigation{
     padding: 10px 30px;
     display: flex;
@@ -40,8 +54,21 @@ p {
     font-weight: 400;
     color: white;
     transition: all .2s;
+    text-align: center;
 }
 
+.navigation #panier img {
+    height: 40px;
+    width: auto;
+}
+
+#panier {
+    padding: 10px 20px;
+    border-radius: 50%;
+    background: #484949;
+    box-shadow: inset 16px 16px 31px #3d3e3e,
+                inset -16px -16px 31px #535454;
+}
 
 
 /*Bandeau*/
@@ -90,5 +117,94 @@ p {
     width: 130px;
     bottom: -10%;
     right: 13%;
+}
+
+.partners img:hover {
+    transform: translateY(-3px);
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Fiche produit*/
+.flex-1 {
+    padding: 7em 2em;
+}
+
+.flex-2 {
+    padding: 3em 3em;
+}
+
+.flex-2 hr {
+    color: #484949;
+    width: 10px;
+}
+
+.neumorphism {
+    padding: 2em;
+    border-radius: 50px;
+    background: #FFFFFF;
+    box-shadow: inset -20px -20px 29px #e7e7e7, inset -20px -20px 82px #fbfbfb;
+    margin: 2em;
+}
+
+.disponibilite, #price-product {
+    display: flex;
+    align-items: center;
+}
+
+#price-product p {
+    margin-left: 20px;
+    font-size: 2em;
+}
+
+.panier2 {
+    border-radius: 100%;
+    background: #FFFFFF;
+    box-shadow:  5px 5px 18px #dbdbdb,
+                -5px -5px 18px #ffffff;
+
+}
+
+.panier2 img {
+    width: 50px;
+    height: auto;
+    padding: 10px;
+}
+
+#dispo {
+    width: auto;
+    height: 20px;
+    padding-right: 10px;
+}
+
+.marques img {
+    height: auto;
+    width: 100px;
+    padding-top: 2em
+}
+
+.banner-product {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Galerie*/
+
+.first-product {
+    width: 80%
+    height: auto;
+}
+
+#gallery {
+    display: flex;
+    list-style: none;
+}
+
+#gallery li img {
+    width: 100px;
+    height: auto;
 }
 
