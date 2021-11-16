@@ -1,0 +1,81 @@
+/*Header*/
+
+@media screen and (max-width: 1000px)
+{
+    .navigation{
+        flex-direction: column;
+    }
+
+    .logo-lien{
+        margin: auto;
+        padding-top: 1em;
+    }
+
+    .menu{
+        padding-top: 1em;
+    }
+
+    #logo{
+        width: 400px;
+    }
+
+    #footer-chatbot{
+        width: 75px;
+        height: 75px;
+    }
+
+    #footer-chatbot{
+        width: 30%;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+@media screen and (max-width: 580px)
+{
+    .navigation{
+        flex-direction: column;
+    }
+
+    .logo-lien{
+        margin: auto;
+        padding-top: 1em;
+    }
+
+    hr{
+        color: #707070;
+    }
+
+    #logo{
+        width: 300px;
+    }
+
+}
+
+@media screen and (max-width: 480px)
+{
+
+    #logo{
+        width: 270px;
+    }
+    
+}
+
+@media screen and (max-width: 350px)
+{
+
+    #logo{
+        width: 240px;
+    }
+    
+}
+
+@media screen and (min-width: 580px)
+{
+    hr{
+        display: none;
+        padding-top: 0.5em;
+    }
+}
