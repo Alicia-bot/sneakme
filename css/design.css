@@ -8,6 +8,15 @@ header{
     background-color: #484949;
 }
 
+@font-face {
+    font-family: "MyHelvetica";
+    src: url("../fonts/Helvetica-Regular.ttf") format("ttf");
+}
+
+p {
+    font-family: "MyHelvetica";
+}
+
 .navigation{
     padding: 10px 30px;
     display: flex;
