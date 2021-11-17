@@ -29,7 +29,7 @@
         justify-content: space-around;
         margin-bottom: 10px;
     }
-    .flex {
+    .flex, .banner-product {
         flex-wrap: wrap;
     }
     #gallery li img {
@@ -42,6 +42,19 @@
     }
     section {
     padding: 1em 2em;
+    }
+    h1 {
+        font-size:1.5em !important;
+    }
+    .first-product {
+        width: 120%;
+        height: auto;
+    }
+    .flex-1 {
+    padding: 2em;
+    }
+    #navigation {
+        flex-wrap: wrap;
     }
 }
 
@@ -88,7 +101,7 @@
 
 @media screen and (min-width: 580px)
 {
-    hr{
+    .menu hr{
         display: none;
         padding-top: 0.5em;
     }

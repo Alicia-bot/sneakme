@@ -15,31 +15,54 @@
 	<link rel="stylesheet" href="css/design.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body>
+<body id="inscription">
+	<section id="connection">
+		<div id="neumorphism-blue">
+			<h1>Connectez-vous !</h1>
+			<div class="flex">
+				<img src="images/inscription/user_white_icon.png">
+				<input id="login-email" type="text" name="e-mail" placeholder="E-mail">
+			</div>
+			<div class="flex">
+				<img src="images/inscription/mdp_white_icon.png">
+				<input id="login-password" type="text" name="password" placeholder="Mot de passe">
+			</div>
+			<h2>Ou se connecter avec</h2>
+			<div class="connect-logo">
+				<img src="images/inscription/fb_icon.png">
+				<img src="images/inscription/ggle_icon.png">
+				<img src="images/inscription/apple_icon.png">
+			</div>
+			<button type="submit">Connexion</button>
+		</div>
+	</section>
 
-    <!--Header-->
-    <header>
-        
-        <nav class="navigation">
-            <a class="logo-lien">
-                <img class="logo" id="logo" src="images/Logo header.png" alt="">
-            </a>
-            <div class="menu">
-                <a href="index.html" class="nav-lien">Accueil</a>
-                <hr>
-                <a href="men_page.html" class="nav-lien">Homme</a>
-                <hr>
-                <a href="women_page.html" class="nav-lien">Femme</a>
-                <hr>
-                <a href="my_account.html" class="nav-lien">Mon compte</a>
-                <hr>
-            </div>
-            <a href="shop.html" id="panier"><img src="images/panier.png"></a>
-        </nav>
-
-    </header>
-
-
+	<section id="registered">
+		<div id="neumorphism-white">
+			<h2>Inscrivez-vous !</h2>
+			<div class="flex">
+				<img src="images/inscription/user_icon.png">
+				<input id="login-lastname" type="text" name="lastname" placeholder="Nom">
+			</div>
+			<div class="flex">
+				<img src="images/inscription/user_icon.png">
+				<input id="login-name" type="text" name="name" placeholder="Prénom">
+			</div>
+			<div class="flex">
+				<img src="images/inscription/mail_icon.png">
+				<input id="sub-email" type="text" name="e-mail" placeholder="E-mail">
+			</div>
+			<div class="flex">
+				<img src="images/inscription/mdp_icon.png">
+				<input id="sub-password" type="text" name="password" placeholder="Mot de passe">
+			</div>
+			<div class="flex">
+				<img src="images/inscription/mdp2_icon.png">
+				<input id="confirm-password" type="text" name="password" placeholder="Mot de passe">
+			</div>
+			<button type="submit">Inscription</button>
+		</div>
+	</section>
 
 </body>
 </html>
