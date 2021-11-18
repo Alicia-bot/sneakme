@@ -4,7 +4,7 @@ body{
 }
 
 #expanded-chat-bot, #reduced-chat-bot{
-    position: absolute !important;
+    position: fixed !important;
     bottom: 10px;
     right: 10px;
 }
@@ -18,6 +18,7 @@ body{
     text-align: center;
     position: fixed;
     padding: 1em;
+    background-color: white;
 }
 
 #expanded-chat-bot::before{
@@ -157,5 +158,5 @@ ul{
 }
 
 a:link, a:visited, a:hover, a:active{
-    color: white;
+    color: white!important;
 }
