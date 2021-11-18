@@ -4,7 +4,7 @@ body{
 }
 
 #expanded-chat-bot, #reduced-chat-bot{
-    position: fixed;
+    position: fixed !important;
     bottom: 10px;
     right: 10px;
 }
@@ -20,6 +20,7 @@ body{
     background-color: #fff;
     z-index: 999;
     box-shadow: 8.11px 8.11px 19px #838589, -8.11px -8.11px 19px #ffffff;
+    background-color: white;
 }
 
 #expanded-chat-bot::before{
@@ -197,7 +198,7 @@ ul{
     right: 13%;
 }
 
-a:link, a:visited, a:hover, a:active{
+a:link, a:visited, a:hover, a:active {
     color: white !important;
 }
 
@@ -226,4 +227,3 @@ a:link, a:visited, a:hover, a:active{
     #footer-chatbot {
         width: 55%;
     }
-}
