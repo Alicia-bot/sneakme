@@ -198,7 +198,7 @@ ul{
     right: 13%;
 }
 
-a:link, a:visited, a:hover, a:active {
+.bot a:link, .bot a:visited, .bot a:hover, .bot a:active {
     color: white !important;
 }
 

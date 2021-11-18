@@ -95,6 +95,8 @@ section {
 #trend a:hover {
     text-decoration: none;
     color: #484949;
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 #trend span {
@@ -500,6 +502,10 @@ footer a {
     color: #fff;
     text-decoration: none;
     padding: 12px;
+}
+
+footer a:hover {
+    color: #E0E0E0;
 }
 
 footer .column span {

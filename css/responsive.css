@@ -8,6 +8,9 @@
     #inscription h1, #inscription h2 {
         font-size: 2em;
     }
+    #expanded-chat-bot {
+        width: 40% !important;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -67,7 +70,10 @@
     .relative {
     top: -50%;
     left: 3%;
-}
+    }
+    #expanded-chat-bot {
+        width: 40% !important;
+    }
 }
 
 
@@ -87,6 +93,9 @@
 
     #logo {
         width: 300px;
+    }
+    #expanded-chat-bot {
+        width: 88% !important;
     }
 }
 
