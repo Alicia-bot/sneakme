@@ -282,6 +282,7 @@ function sayingGoodbye(value){
         answer.innerHTML = `Merci à vous pour votre visite, n'hésitez pas à visiter nos <a href="#">réseaux sociaux</a> si l'expérience vous a plu. En espérant bientôt vous revoir !`;
         boxAnswer.append(answer);
         messageBox.append(boxAnswer);
+        getDownWhenTalking();
     }
 }
 
