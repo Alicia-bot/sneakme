@@ -252,7 +252,9 @@ function renderAnswer(sneakers, brandList, sizeList){
         list.append(li);
     }
     requestedSneaker = brandList.concat(sizeList).join(' et ');
-    if(sneakersAmount == 1){
+    if(sneakersAmount == 0){
+        answer.innerHTML = `La paire que vous demandez n'est pas en stock pour le moment, n'hésitez pas à repasser dans les prochains jours pour voir si elle est revenue!`
+    } else if(sneakersAmount == 1){
         answer.innerHTML = `J\'ai trouvé une paire chaussure correspondant à la demande ${requestedSneaker} , la voici :`
     } else {
         answer.innerHTML = `J\'ai trouvé ${sneakersAmount} paires de chaussures correspondants à votre demande de ${requestedSneaker}, les voici :`
@@ -282,6 +284,7 @@ function sayingGoodbye(value){
         answer.innerHTML = `Merci à vous pour votre visite, n'hésitez pas à visiter nos <a href="#">réseaux sociaux</a> si l'expérience vous a plu. En espérant bientôt vous revoir !`;
         boxAnswer.append(answer);
         messageBox.append(boxAnswer);
+        getDownWhenTalking();
     }
 }
 
