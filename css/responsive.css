@@ -1,5 +1,15 @@
 /*Header*/
 
+@media screen and (max-width: 1200px) {
+    .connect-logo img {
+        width: auto;
+        height: 50px;
+    }
+    #inscription h1, #inscription h2 {
+        font-size: 2em;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .navigation{
         flex-direction: column;
@@ -18,49 +28,46 @@
         width: 400px;
     }
 
-    #footer-chatbot{
-        width: 75px;
-        height: 75px;
-    }
-
-    #footer-chatbot{
-        width: 30%;
-        justify-content: space-around;
-        margin-bottom: 10px;
-    }
     .flex, .banner-product {
         flex-wrap: wrap;
     }
+
     #gallery li img {
     width: 40px;
     height: auto;
     }
+
     .first-product img  {
         width: 80%;
         height: auto;
     }
+
     section {
     padding: 1em 2em;
     }
+
     h1 {
         font-size:1.5em !important;
     }
+
     .first-product {
         width: 120%;
         height: auto;
     }
+
     .flex-1 {
     padding: 2em;
     }
     #navigation {
         flex-wrap: wrap;
     }
-}
-
-@media screen and (max-width: 800px) {
-    #footer-chatbot {
-        width: 45%;
+    #inscription {
+        flex-direction: column;
     }
+    .relative {
+    top: -50%;
+    left: 3%;
+}
 }
 
 
@@ -81,11 +88,6 @@
     #logo {
         width: 300px;
     }
-
-    #footer-chatbot {
-        width: 55%;
-    }
-
 }
 
 @media screen and (max-width: 480px) {
@@ -93,7 +95,6 @@
     #logo {
         width: 270px;
     }
-    
 }
 
 @media screen and (max-width: 350px) {

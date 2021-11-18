@@ -6,32 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
 	<link rel="icon" href="images/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="index.html">
-	<link rel="stylesheet" type="text/css" href="women_page.html">
-	<link rel="stylesheet" type="text/css" href="my_account.html">
-	<link rel="stylesheet" type="text/css" href="shop.html">
-	<link rel="stylesheet" type="text/css" href="promo.html">
-	<link rel="stylesheet" type="text/css" href="air_jordan_cactus_jack.html">
 	<link rel="stylesheet" href="css/design.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body id="inscription">
 	<section id="connection">
+		<div class="relative">
+			<a id="arrow" href="index.html" target="_self"><img src="images/inscription/arrow.png" alt="Flèche de retour"></a>
+		</div>
 		<div id="neumorphism-blue">
 			<h1>Connectez-vous !</h1>
-			<div class="flex">
+			<div class="connect">
 				<img src="images/inscription/user_white_icon.png">
 				<input id="login-email" type="text" name="e-mail" placeholder="E-mail">
 			</div>
-			<div class="flex">
+			<div class="connect">
 				<img src="images/inscription/mdp_white_icon.png">
 				<input id="login-password" type="text" name="password" placeholder="Mot de passe">
 			</div>
 			<h2>Ou se connecter avec</h2>
 			<div class="connect-logo">
-				<img src="images/inscription/fb_icon.png">
-				<img src="images/inscription/ggle_icon.png">
-				<img src="images/inscription/apple_icon.png">
+				<a href="https://fr-fr.facebook.com/" target="_self"><img src="images/inscription/fb_icon.png"></a>
+				<a href="https://accounts.google.com/" target="_self"><img src="images/inscription/ggle_icon.png"></a>
+				<a href="https://appleid.apple.com/fr/" target="_self"><img src="images/inscription/apple_icon.png"></a>
 			</div>
 			<button type="submit">Connexion</button>
 		</div>
@@ -40,25 +37,25 @@
 	<section id="registered">
 		<div id="neumorphism-white">
 			<h2>Inscrivez-vous !</h2>
-			<div class="flex">
+			<div class="connect">
 				<img src="images/inscription/user_icon.png">
 				<input id="login-lastname" type="text" name="lastname" placeholder="Nom">
 			</div>
-			<div class="flex">
+			<div class="connect">
 				<img src="images/inscription/user_icon.png">
 				<input id="login-name" type="text" name="name" placeholder="Prénom">
 			</div>
-			<div class="flex">
+			<div class="connect">
 				<img src="images/inscription/mail_icon.png">
 				<input id="sub-email" type="text" name="e-mail" placeholder="E-mail">
 			</div>
-			<div class="flex">
+			<div class="connect">
 				<img src="images/inscription/mdp_icon.png">
 				<input id="sub-password" type="text" name="password" placeholder="Mot de passe">
 			</div>
-			<div class="flex">
+			<div class="connect">
 				<img src="images/inscription/mdp2_icon.png">
-				<input id="confirm-password" type="text" name="password" placeholder="Mot de passe">
+				<input id="confirm-password" type="text" name="confirm-password" placeholder="Confirmation mot de passe">
 			</div>
 			<button type="submit">Inscription</button>
 		</div>

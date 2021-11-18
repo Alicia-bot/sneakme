@@ -242,51 +242,6 @@ section {
     width: 100%;
 }
 
-
-/*Question*/
-#bulle{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #006FB8;
-    border-radius: 30px;
-    width: 140px;
-    height: 50px;
-    text-align: center;
-    color: white;
-    z-index: 10;
-}
-
-
-/*Bot*/
-#footer-chatbot{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 250px;
-    height: 100px;
-    position: absolute !important; /* La position absolute extrait l'élément du flux HTML. Il n'a donc plus de position défini est ne subit pas d'influence des autres blocs */
-    bottom: 10px;
-    right: 10px;
-    z-index: 3;
-    position: fixed !important;
-}
-
-#tooltip{
-    position: relative; /* La position relative rétablit l'élément dans le flux HTML par rapport à un parent positionné en absolute */
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: #fff;
-    box-shadow: 8.11px 8.11px 19px #838589, -8.11px -8.11px 19px #FFFFFF;
-}
-
-#sneak{
-    position: relative;
-    width: 130px;
-    bottom: -10%;
-    right: 13%;
-}
-
 .partners img:hover {
     transform: translateY(-3px);
 }
@@ -391,10 +346,10 @@ section {
 
 .choice-product img:hover, #gallery li img:hover {
     cursor: pointer;
-    -webkit-transform:scale(1.25); /* Safari et Chrome */
-    -moz-transform:scale(1.25); /* Firefox */
-    -ms-transform:scale(1.25); /* Internet Explorer 9 */
-    -o-transform:scale(1.25); /* Opera */
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
     transform:scale(1.25);
     background: linear-gradient(145deg, #ffffff, #e6e6e6);
     box-shadow:  5px 5px 12px #dbdbdb, -5px -5px 12px #ffffff;
@@ -418,6 +373,21 @@ section {
 }
 
 /*Page Inscription*/
+.relative {
+    position: relative;
+    top: -50%;
+    left: -10%;
+}
+
+#arrow {
+    position: absolute;
+}
+
+#arrow img {
+    width: 80px;
+    height: auto;
+}
+
 #inscription {
     display: flex;
     justify-content: center;
@@ -438,6 +408,9 @@ section {
 #neumorphism-blue, #neumorphism-white {
     width: 100%;
     height: 70%;
+    padding: 4em 1em 0 1em;
+    border-radius: 130px;
+    text-align: center;
 }
 
 #connection {
@@ -447,11 +420,9 @@ section {
 }
 
 #neumorphism-blue {
-    border-radius: 130px;
     background: #35558B;
     box-shadow: inset 19px 19px 38px #284068, inset -19px -19px 38px #426aae;
-    color: #fff;
-    text-align: center;
+    color:  #fff;   
 }
 
 #neumorphism-blue h2 {
@@ -459,10 +430,14 @@ section {
 }
 
 #neumorphism-white {
-    border-radius: 78px;
     background: linear-gradient(145deg, #ffffff, #e6e6e6);
     box-shadow:  19px 19px 47px #adadad, -19px -19px 47px #ffffff;
-    text-align: center;
+}
+
+.connect {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
 }
 
 .connect-logo {
@@ -486,9 +461,10 @@ section {
     border-radius: 20px;
     border: 0;
     font-family: 'Qtype';
+    width: 300px;
 }
 
-#inscription #neumorphism-blue button {
+#inscription #neumorphism-blue button, #inscription #neumorphism-white button {
     border: 0;
     background-color: transparent;
     color: #fff;
@@ -497,7 +473,11 @@ section {
     padding-top: 1em;
 }
 
-#inscription #neumorphism-blue button:hover {
+#inscription #neumorphism-white button {
+    color: #000;
+}
+
+#inscription #neumorphism-blue button:hover, #inscription #neumorphism-white button:hover {
     opacity: 0.8;
     cursor: pointer;
 }
@@ -543,4 +523,47 @@ footer .column span {
 .column .social img {
     width: 40px;
     height: auto;
+}
+
+/*CGU*/
+
+
+#title-CGU{
+    color: #707070;
+}
+
+#CGU{
+    color: #707070;
+    margin: 10%;
+    margin-top: 50px;
+}
+
+.sous-titres{
+    font-weight: 800;
+}
+
+
+/*CGV*/
+
+#CGV{
+    color: #707070;
+    margin: 10%;
+    margin-top: 50px;
+}
+
+.title-CGV{
+    font-weight: 800;
+}
+
+#grand-titre{
+    color: #707070;
+}
+
+
+/*MENTIONS LÉGALES*/
+
+#ML{
+    color: #707070;
+    margin: 10%;
+    margin-top: 50px;
 }

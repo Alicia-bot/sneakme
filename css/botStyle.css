@@ -4,26 +4,28 @@ body{
 }
 
 #expanded-chat-bot, #reduced-chat-bot{
-    position: absolute !important;
+    position: fixed;
     bottom: 10px;
     right: 10px;
 }
 
 #expanded-chat-bot{
     width: 25%;
-    border: 1px solid black;
     border-radius: 10%;
     height: 30em;
     font-size: .9em;
     text-align: center;
     position: fixed;
     padding: 1em;
+    background-color: #fff;
+    z-index: 999;
+    box-shadow: 8.11px 8.11px 19px #838589, -8.11px -8.11px 19px #ffffff;
 }
 
 #expanded-chat-bot::before{
     content : '';
     position: absolute;
-    top: -1em;
+    top: -2em;
     left: -2em;
     width: 4em;
     height: 4em;
@@ -33,7 +35,7 @@ body{
     background-position: center center;
     border-radius: 50px;
     overflow: hidden;
-    box-shadow: 8.11px 8.11px 19px #838589, -8.11px -8.11px 19px #FFFFFF;
+    box-shadow: 0px 0px 19px #838589, -9px -9px 19px #ffffff;
     background-color: white;
 }
 
@@ -70,6 +72,10 @@ p{
 
 i{
     color: #006FB8;
+}
+
+.reduce {
+    cursor: pointer;
 }
 
 #input{
@@ -128,6 +134,40 @@ ul{
     padding-top: .8em;
 }
 
+    #question, #tooltip {
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#question:hover, #tooltip:hover {
+    cursor: pointer;
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+}
+
+@keyframes bounce {
+    0%, 100%, 20%, 50%, 80% {
+        -webkit-transform: translateY(0);
+        -ms-transform:     translateY(0);
+        transform:         translateY(0)
+    }
+    40% {
+        -webkit-transform: translateY(-20px);
+        -ms-transform:     translateY(-20px);
+        transform:         translateY(-20px)
+    }
+    60% {
+        -webkit-transform: translateY(-15px);
+        -ms-transform:     translateY(-15px);
+        transform:         translateY(-15px)
+    }
+}
 
 /*Bot*/
 #reduced-chat-bot{
@@ -137,6 +177,7 @@ ul{
     width: 250px;
     height: 100px;
     z-index: 3;
+    cursor: pointer;
 }
 
 #tooltip{
@@ -157,5 +198,32 @@ ul{
 }
 
 a:link, a:visited, a:hover, a:active{
-    color: white;
+    color: white !important;
+}
+
+/*Responsive*/
+
+@media screen and (max-width: 1000px) {
+    #chat-bot{
+        width: 75px;
+        height: 75px;
+    }
+
+    #chat-bot{
+        width: 30%;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #chat-bot {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #footer-chatbot {
+        width: 55%;
+    }
 }
