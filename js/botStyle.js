@@ -11,6 +11,7 @@ chatBot.innerHTML = `
         <div id="input">
             <div class="reduce"><i class="fas fa-angle-double-down"></i></div>
             <input type="text" name='chat' id="search" placeholder="Discutez avec moi !">
+            <div class="send"><i class="fas fa-paper-plane"></i></div>
         </div>
     </div>
 </div>
@@ -145,16 +146,25 @@ let confusedReply = [
 ];
 
 const searchBar = document.querySelector("#search");
+const sendBtn = document.querySelector(".send");
 const messageBox = document.querySelector("#messages");
 botAnswer = false;
 canFindSneaker = false;
 
+sendBtn.addEventListener("click", handleInput);
+
 searchBar.addEventListener("keydown", function(event) {
     // Number 13 is the "Enter" key on the keyboard
     if (event.keyCode === 13) {
-        botAnswer = false;
-        canFindSneaker = false;
-        let searchValue = searchBar.value;
+        handleInput();
+    }
+});
+
+function handleInput(){
+    botAnswer = false;
+    canFindSneaker = false;
+    let searchValue = searchBar.value;
+    if(searchValue){
         let valueForBot = searchValue.toLowerCase();
         const boxRequest = document.createElement('div');
         boxRequest.classList.add("human");
@@ -173,7 +183,7 @@ searchBar.addEventListener("keydown", function(event) {
             unknownRequest();
         }
     }
-});
+}
 
 function sayingHello(value){
     let text = value.replace(/[^\w\s\d]/gi, "");
