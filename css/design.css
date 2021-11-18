@@ -114,6 +114,23 @@ section {
 }
 
 /*Logos des partenaires*/
+.title-partners {
+    align-items: center;
+    width: 100%;
+}
+
+.hr-style {
+    width: 33%;
+}
+
+.marque {
+    width: 15%;
+}
+
+#test {
+    width: 100%;
+}
+
 #partners h2 {
   overflow: hidden;
   text-align: center;
@@ -419,7 +436,8 @@ section {
 }
 
 #neumorphism-blue, #neumorphism-white {
-    padding: 5em;
+    width: 100%;
+    height: 70%;
 }
 
 #connection {
@@ -502,4 +520,27 @@ footer a {
     color: #fff;
     text-decoration: none;
     padding: 12px;
+}
+
+footer .column span {
+    text-transform: uppercase;
+    padding: 10px 0 10px 0;
+}
+
+.footer-pay {
+    background-color: #E0E0E0;
+    align-items: center;
+}
+
+.footer-pay p {
+    color: #484949;
+}
+
+.footer-pay img {
+    height: 40px;
+}
+
+.column .social img {
+    width: 40px;
+    height: auto;
 }

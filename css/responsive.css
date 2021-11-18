@@ -1,7 +1,6 @@
 /*Header*/
 
-@media screen and (max-width: 1000px)
-{
+@media screen and (max-width: 1000px) {
     .navigation{
         flex-direction: column;
     }
@@ -58,50 +57,64 @@
     }
 }
 
+@media screen and (max-width: 800px) {
+    #footer-chatbot {
+        width: 45%;
+    }
+}
 
 
-@media screen and (max-width: 580px)
-{
-    .navigation{
+@media screen and (max-width: 580px) {
+    .navigation {
         flex-direction: column;
     }
 
-    .logo-lien{
+    .logo-lien {
         margin: auto;
         padding-top: 1em;
     }
 
-    header hr{
+    header hr, .column hr {
         color: #707070;
     }
 
-    #logo{
+    #logo {
         width: 300px;
+    }
+
+    #footer-chatbot {
+        width: 55%;
     }
 
 }
 
-@media screen and (max-width: 480px)
-{
+@media screen and (max-width: 480px) {
 
-    #logo{
+    #logo {
         width: 270px;
     }
     
 }
 
-@media screen and (max-width: 350px)
-{
+@media screen and (max-width: 350px) {
 
-    #logo{
+    #logo {
         width: 240px;
     }
     
 }
 
-@media screen and (min-width: 580px)
-{
-    .menu hr{
+@media screen and (max-width: 900px) {
+    .hr-style {
+        width: 30%;
+    }
+    .marque {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 580px) {
+    .menu hr, footer .column hr {
         display: none;
         padding-top: 0.5em;
     }
