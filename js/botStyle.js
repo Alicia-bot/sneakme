@@ -256,10 +256,14 @@ function renderAnswer(sneakers, brandList, sizeList){
         answer.innerHTML = `La paire que vous demandez n'est pas en stock pour le moment, n'hésitez pas à repasser dans les prochains jours pour voir si elle est revenue!`
     } else if(sneakersAmount == 1){
         answer.innerHTML = `J\'ai trouvé une paire chaussure correspondant à la demande ${requestedSneaker} , la voici :`
+    }else if(sneakersAmount >= 4){
+        answer.innerHTML = `J\'ai trouvé ${sneakersAmount} paires de chaussures correspondants à votre demande de ${requestedSneaker} , mais je préfère vous rediriger vers leur page, je ne peux malheureusement pas tout afficher ici.`
     } else {
         answer.innerHTML = `J\'ai trouvé ${sneakersAmount} paires de chaussures correspondants à votre demande de ${requestedSneaker}, les voici :`
     }
-    answer.append(list);
+    if(sneakersAmount < 4){
+        answer.append(list);
+    }
     boxAnswer.append(answer);
     messageBox.append(boxAnswer);
     getDownWhenTalking();
