@@ -32,6 +32,10 @@ p {
     font-size: 17px;
 }
 
+a:hover {
+    color: #eaeaea !important;
+}
+
 .btn {
     border: 0;
     padding: 10px 30px;
@@ -70,10 +74,6 @@ section {
     color: #fff;
     transition: all .2s;
     text-align: center;
-}
-
-.nav-lien a:hover {
-    color: #fff !important;
 }
 
 .navigation #panier img {
