@@ -72,7 +72,7 @@ section {
     text-align: center;
 }
 
-.nav-lien:hover {
+.nav-lien a:hover {
     color: #fff;
 }
 
