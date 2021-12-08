@@ -67,9 +67,13 @@ section {
     font-size: 1.1em;
     padding: 10px 30px;
     font-weight: 400;
-    color: white;
+    color: #fff;
     transition: all .2s;
     text-align: center;
+}
+
+.nav-lien:hover {
+    color: #fff;
 }
 
 .navigation #panier img {
