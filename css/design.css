@@ -73,7 +73,7 @@ section {
 }
 
 .nav-lien a:hover {
-    color: #fff;
+    color: #fff !important;
 }
 
 .navigation #panier img {
