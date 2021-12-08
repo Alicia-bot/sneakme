@@ -102,15 +102,27 @@ let isSalutation = [
     "salut",
     "bonsoir",
     "enchanté",
-    "salutations"
+    "salutations",
+    "wesh",
+    "yo",
+    "hello"
 ];
 
 // setting the bot salutations
 let salutationReply = [
     "Bonjour, quelle marque de chaussure recherchez vous?",
-    "Bonjour à vous, j'espère que vous allez bien! Quelle chaussure vous ferait plaisir?",
+    "Bonjour à vous, j'espère que vous allez bien ! Quelle chaussure vous ferait plaisir?",
     "Bonjour à vous ! Recherchez une chaussure à l'aide de sa marque.",
-    "Yo tout le monde, c'est Sneaky. C'est un plaisir de vous retrouver aujourd'hui pour vous aider dans vos achats."
+    "Yo tout le monde, c'est Sneaky. C'est un plaisir de vous retrouver aujourd'hui pour vous aider dans vos achats.",
+    "Bienvenue ! Je suis ici pour vous aider à choisir la paire de vos rêves."
+];
+
+let isLeaving = [
+    "bye",
+    "ciao",
+    "tchao",
+    "zrevoir",
+    "adieu"
 ];
 
 // setting brands name the bot can recognize
@@ -270,25 +282,31 @@ function renderAnswer(sneakers, brandList, sizeList){
 }
 
 function sayingGoodbye(value){
-    if (value == 'au revoir'){
-        botAnswer = true;
-        let text = "Merci à vous de nous avoir suivis, j'espère que la présentation vous aura plus, en espérant que ma voix ne soit pas trop désagréable pour vous. Maintenant il est temps pour vous de nous poser vos questions."
-        const u = new SpeechSynthesisUtterance();
-        allVoices = speechSynthesis.getVoices();
-        u.voice = allVoices.filter(voice => voice.name === "Alex")[0];
-        u.text = text;
-        u.lang = "fr-FR";
-        u.volume = 1; //0-1 interval
-        u.rate = 1;
-        u.pitch = 1; //0-2 interval
-        speechSynthesis.speak(u);
-        const boxAnswer = document.createElement('div');
-        boxAnswer.classList.add("bot");
-        const answer = document.createElement('p');
-        answer.innerHTML = `Merci à vous pour votre visite, n'hésitez pas à visiter nos <a href="#">réseaux sociaux</a> si l'expérience vous a plu. En espérant bientôt vous revoir !`;
-        boxAnswer.append(answer);
-        messageBox.append(boxAnswer);
-        getDownWhenTalking();
+    let text = value.replace(/[^\w\s\d]/gi, "");
+    const splittedValue = text.split(' ');
+    for (let i = 0; i < splittedValue.length; i++) {
+        for (let g = 0; g < isLeaving.length; g++) {
+            if(splittedValue[i] == isLeaving[g]){
+                botAnswer = true;
+                // let text = "Merci à vous de nous avoir suivis, j'espère que la présentation vous aura plus, en espérant que ma voix ne soit pas trop désagréable pour vous. Maintenant il est temps pour vous de nous poser vos questions."
+                // const u = new SpeechSynthesisUtterance();
+                // allVoices = speechSynthesis.getVoices();
+                // u.voice = allVoices.filter(voice => voice.name === "Alex")[0];
+                // u.text = text;
+                // u.lang = "fr-FR";
+                // u.volume = 1; //0-1 interval
+                // u.rate = 1;
+                // u.pitch = 1; //0-2 interval
+                // speechSynthesis.speak(u);
+                const boxAnswer = document.createElement('div');
+                boxAnswer.classList.add("bot");
+                const answer = document.createElement('p');
+                answer.innerHTML = `Merci à vous pour votre visite, n'hésitez pas à visiter nos <a href="#">réseaux sociaux</a> si l'expérience vous a plu. En espérant bientôt vous revoir !`;
+                boxAnswer.append(answer);
+                messageBox.append(boxAnswer);
+                getDownWhenTalking();
+            }
+        }
     }
 }
 
