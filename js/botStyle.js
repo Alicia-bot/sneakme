@@ -105,7 +105,8 @@ let isSalutation = [
     "salutations",
     "wesh",
     "yo",
-    "hello"
+    "hello",
+    "test"
 ];
 
 // setting the bot salutations
