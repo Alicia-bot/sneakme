@@ -531,8 +531,8 @@ footer .column span {
     height: 40px;
 }
 
-.column .social img {
-    width: 40px;
+.social img {
+    width: 40px !important;
     height: auto;
 }
 
