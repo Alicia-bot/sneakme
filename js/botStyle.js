@@ -121,7 +121,7 @@ let isLeaving = [
     "bye",
     "ciao",
     "tchao",
-    "zrevoir",
+    "revoir",
     "adieu"
 ];
 
