@@ -11,7 +11,7 @@
 </head>
 
 <body id="inscription">
-	<section id="connection">
+	<form id="connection" action="login.php" method='post'>
 		<div class="relative">
 			<a id="arrow" href="index.php" target="_self"><img src="images/inscription/arrow.png" alt="Flèche de retour"></a>
 		</div>
@@ -34,26 +34,27 @@
 				<button type="submit">Connexion</button>
 				<button id="lost-mdp" type="submit">Mot de passe oublié ?</button>
 		</div>
-	</section>
+</form>
 
-	<section id="registered">
+	<form id="registered" action="register.php" method='post'>
 		<div id="neumorphism-white">
 			<h2>Inscrivez-vous !</h2>
 			<div class="connect">
 				<img src="images/inscription/user_icon.png">
-				<input id="login-lastname" type="text" name="lastname" placeholder="Nom">
+				<input id="register-lastname" type="text" name="lastname" placeholder="Nom">
+				<small><?= $errors['lastname'] ?? '' ?></small>
 			</div>
 			<div class="connect">
 				<img src="images/inscription/user_icon.png">
-				<input id="login-name" type="text" name="name" placeholder="Prénom">
+				<input id="register-name" type="text" name="name" placeholder="Prénom">
 			</div>
 			<div class="connect">
 				<img src="images/inscription/mail_icon.png">
-				<input id="sub-email" type="text" name="e-mail" placeholder="E-mail">
+				<input id="register-email" type="text" name="e-mail" placeholder="E-mail">
 			</div>
 			<div class="connect">
 				<img src="images/inscription/mdp_icon.png">
-				<input id="sub-password" type="text" name="password" placeholder="Mot de passe">
+				<input id="register-password" type="text" name="password" placeholder="Mot de passe">
 			</div>
 			<div class="connect">
 				<img src="images/inscription/mdp2_icon.png">
@@ -61,7 +62,7 @@
 			</div>
 			<button type="submit">Inscription</button>
 		</div>
-	</section>
+	</form>
 
 </body>
 </html>

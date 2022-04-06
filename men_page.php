@@ -18,7 +18,7 @@
 <body>
 
     <!--Header-->
-    <?php include "header.html" ?>
+    <?php include "header.php" ?>
 
     <h1>Homme</h1>
     <hr>

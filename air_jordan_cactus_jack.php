@@ -17,7 +17,7 @@
 <body>
 
 	<!--Header-->
-    <?php include "header.html" ?>
+    <?php include "header.php" ?>
 
 	<section class="flex">
 		<div class="flex-1">

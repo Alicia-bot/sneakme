@@ -16,9 +16,11 @@
 </head>
 
 <body>
-
+<?php session_start();?>
     <!--Header-->
-    <?php include "header.html" ?>
+
+    <?php include "header.php" ?>
+
 
     <!--Bandeau-->
     <div>
