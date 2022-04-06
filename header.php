@@ -1,15 +1,15 @@
 <header>
         
         <nav class="navigation">
-            <a href="index.html" class="logo-lien">
+            <a href="index.php" class="logo-lien">
                 <img class="logo" id="logo" src="images/logo-header.png" alt="Logo Sneak Me">
             </a>
             <ul class="menu">
-                <li><a href="index.html" class="nav-lien">Accueil</a></li>
+                <li><a href="index.php" class="nav-lien">Accueil</a></li>
                 <hr>
-                <li><a href="men_page.html" class="nav-lien">Homme</a></li>
+                <li><a href="men_page.php" class="nav-lien">Homme</a></li>
                 <hr>
-                <li><a href="women_page.html" class="nav-lien">Femme</a></li>
+                <li><a href="women_page.php" class="nav-lien">Femme</a></li>
                 <hr>
                 <li><a href="inscription.php" class="nav-lien">Mon compte</a>
                 <?php
@@ -21,7 +21,7 @@
                 ?>
                 </li>
                 <hr>
-                <li><a href="shop.html" id="panier"><img src="images/panier.png" alt="Panier"></a></li>
+                <li><a href="shop.php" id="panier"><img src="images/panier.png" alt="Panier"></a></li>
             </ul>
         </nav>
 
