@@ -15,7 +15,8 @@
 </head>
 
 <body>
-
+<?php
+var_dump($_SESSION); ?>
     <!--Header-->
     <header>
         
@@ -30,7 +31,7 @@
                 <hr>
                 <a href="women_page.html" class="nav-lien">Femme</a>
                 <hr>
-                <a href="inscription.html" class="nav-lien">Mon compte</a>
+                <a href="inscription.php" class="nav-lien">Mon compte</a>
                 <hr>
             </div>
             <a href="shop.html" id="panier"><img src="images/panier.png" alt="Panier"></a>

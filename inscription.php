@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body id="inscription">
-	<section id="connection">
+	<form id="connection" action="login.php" method='post'>
 		<div class="relative">
 			<a id="arrow" href="index.html" target="_self"><img src="images/inscription/arrow.png" alt="Flèche de retour"></a>
 		</div>
@@ -32,7 +32,7 @@
 			</div>
 			<button type="submit">Connexion</button>
 		</div>
-	</section>
+</form>
 
 	<form id="registered" action="register.php" method='post'>
 		<div id="neumorphism-white">
@@ -40,6 +40,7 @@
 			<div class="connect">
 				<img src="images/inscription/user_icon.png">
 				<input id="register-lastname" type="text" name="lastname" placeholder="Nom">
+				<small><?= $errors['lastname'] ?? '' ?></small>
 			</div>
 			<div class="connect">
 				<img src="images/inscription/user_icon.png">

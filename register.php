@@ -1,20 +1,7 @@
 <?php 
      $db = null;
 
-     function getConnexion(){
-         $host = 'localhost';
-         $dbName = 'sneak_me';
-         $user = 'root';
-         $password = '';
-          try { 
-             $db = new PDO("mysql:host=$host;dbname=$dbName;charset=utf8", $user, $password);
-         }
-         catch (PDOException $e){
-             die("Connexion échouée : " . $e->getMessage());
-         }
- 
-         return $db;
-     }
+     include('database.php');
 
      $db = getConnexion();
 
@@ -39,8 +26,7 @@
             echo'Vos deux mots de passe ne concordent pas';
         } else {
             insert($db, $firstName, $lastName, $mail, $password);
-            die(insert($db, $firstName, $lastName, $mail, $password));
-            header('location: index.html');
+            header('location: login.php');
         }
     }
 
