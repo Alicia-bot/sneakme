@@ -14,10 +14,16 @@
     <link href="bot.html" rel="import" />
     <script src="https://kit.fontawesome.com/753aa87031.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
     <!--Header-->
     <?php include "header.html" ?>
+
+    <h1>Femme</h1>
+    <hr>
+    <p>Découvrez les sneakers pour femme de Sneak Me..</p>
+
 
     <!--Minifiches produits-->
         <section id="trend">

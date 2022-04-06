@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/design.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body id="inscription">
 	<section id="connection">
 		<div class="relative">
@@ -30,8 +31,8 @@
 				<a href="https://accounts.google.com/" target="_self"><img src="images/inscription/ggle_icon.png"></a>
 				<a href="https://appleid.apple.com/fr/" target="_self"><img src="images/inscription/apple_icon.png"></a>
 			</div>
-			<button id="btnco" type="submit">Connexion</button>
-			<button id="mdp" type="submit">Mot de passe oublié ?</button>
+				<button type="submit">Connexion</button>
+				<button id="mdp" type="submit">Mot de passe oublié ?</button>
 		</div>
 	</section>
 
