@@ -30,6 +30,7 @@ hr {
 
 p {
     font-size: 17px;
+    text-align: center;
 }
 
 .btn {
@@ -53,6 +54,10 @@ section {
     box-shadow: 0px 3px 15px rgba(0,0,0,.3);
 }
 
+.navigation a:hover {
+    color: #eaeaea !important;
+}
+
 .logo{
     width: 400px;
 }
@@ -67,7 +72,7 @@ section {
     font-size: 1.1em;
     padding: 10px 30px;
     font-weight: 400;
-    color: white;
+    color: #fff;
     transition: all .2s;
     text-align: center;
 }
@@ -475,6 +480,13 @@ section {
     padding-top: 1em;
 }
 
+#inscription #neumorphism-blue button#mdp {
+    font-size: 0.8em !important;
+    padding-top: 2em !important;
+    display: block;
+    margin: auto;
+}
+
 #inscription #neumorphism-white button {
     color: #000;
 }
@@ -482,20 +494,6 @@ section {
 #inscription #neumorphism-blue button:hover, #inscription #neumorphism-white button:hover {
     opacity: 0.8;
     cursor: pointer;
-}
-
-#lost_div {
-    position: absolute;
-}
-
-#lost_password {
-    position: fixed;
-    bottom: 3%;
-    left: 2%;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5em;
-    font-family: 'Qtype';
 }
 
 /*Footer*/

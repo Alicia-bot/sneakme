@@ -12,7 +12,7 @@
 <body id="inscription">
 	<section id="connection">
 		<div class="relative">
-			<a id="arrow" href="index.html" target="_self"><img src="images/inscription/arrow.png" alt="Flèche de retour"></a>
+			<a id="arrow" href="index.php" target="_self"><img src="images/inscription/arrow.png" alt="Flèche de retour"></a>
 		</div>
 		<div id="neumorphism-blue">
 			<h1>Connectez-vous !</h1>
@@ -30,7 +30,8 @@
 				<a href="https://accounts.google.com/" target="_self"><img src="images/inscription/ggle_icon.png"></a>
 				<a href="https://appleid.apple.com/fr/" target="_self"><img src="images/inscription/apple_icon.png"></a>
 			</div>
-			<button type="submit">Connexion</button>
+			<button id="btnco" type="submit">Connexion</button>
+			<button id="mdp" type="submit">Mot de passe oublié ?</button>
 		</div>
 	</section>
 
