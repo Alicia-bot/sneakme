@@ -1,4 +1,5 @@
 <?php
+    $db = null;
     function getConnexion(){
         $host = 'localhost';
         $dbName = 'sneak_me';

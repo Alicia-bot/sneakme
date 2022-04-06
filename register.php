@@ -1,9 +1,9 @@
 <?php 
-     $db = null;
+    $db = null;
 
-     include('database.php');
+    include('database.php');
 
-     $db = getConnexion();
+    $db = getConnexion();
 
     $firstName = !empty($_POST) ? $_POST['name'] : null ;
     $lastName = !empty($_POST) ? $_POST['lastname'] : null ;
