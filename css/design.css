@@ -480,6 +480,13 @@ section {
     padding-top: 1em;
 }
 
+button#lost-mdp {
+    font-size: 0.8em !important;
+    padding-top: 2em !important;
+    display: block !important;
+    margin: auto !important;
+}
+
 #inscription #neumorphism-white button {
     color: #000;
 }
