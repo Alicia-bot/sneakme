@@ -13,6 +13,7 @@ function find_user($db, $mail, $password){
     $request->execute([':mail'=>$mail, ':password'=>$password]);
     $row = $request->fetch(PDO::FETCH_ASSOC);
     if($mail === $row['mail'] && $password === $row['password']){
+        session_start();
         $_SESSION['userName'] = $row['first_name'];
         $_SESSION['userId'] = $row['id'];
         header('location: index.php');
