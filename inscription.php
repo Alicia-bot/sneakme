@@ -25,14 +25,14 @@
 				<img src="images/inscription/mdp_white_icon.png">
 				<input id="login-password" type="text" name="password" placeholder="Mot de passe">
 			</div>
+			<button type="submit">Connexion</button>
+			<button id="lost-mdp" type="submit">Mot de passe oublié ?</button>
 			<h2>Ou se connecter avec</h2>
 			<div class="connect-logo">
 				<a href="https://fr-fr.facebook.com/" target="_self"><img src="images/inscription/fb_icon.png"></a>
 				<a href="https://accounts.google.com/" target="_self"><img src="images/inscription/ggle_icon.png"></a>
 				<a href="https://appleid.apple.com/fr/" target="_self"><img src="images/inscription/apple_icon.png"></a>
 			</div>
-				<button type="submit">Connexion</button>
-				<button id="lost-mdp" type="submit">Mot de passe oublié ?</button>
 		</div>
 </form>
 
