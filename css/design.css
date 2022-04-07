@@ -61,7 +61,32 @@ section {
 ul.menu {
     display: flex;
     align-content: center;
+    margin: 0;
 }
+
+#sous-page {
+    position: relative;
+    top: 113%;
+}
+
+#sous-page li a {
+    color: #fff;
+    background-color: #484949;
+    padding: 25px 15px;
+    text-decoration: none;
+    font-family: "Qtype";
+    border-top: 1px solid #fff;
+}
+
+/*.menu li a:hover #sous-page li a {
+    visibility: visible !important;
+    display: block;
+}
+
+#sous-page li a {
+    visibility: hidden;
+    display: none;
+}*/
 
 .logo{
     width: 400px;
