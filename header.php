@@ -15,7 +15,7 @@
                 <?php
                 session_start();
                 if(isset($_SESSION['userName'])){
-                    echo'<ul>
+                    echo'<ul id="sous-page">
                         <li><a href="logout.php"> Se déconnecter </a></li>
                     </ul>';
                 }
