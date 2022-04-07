@@ -13,6 +13,7 @@
                 <hr>
                 <li><a href="inscription.php" class="nav-lien">Mon compte</a>
                 <?php
+                session_start();
                 if(isset($_SESSION['userName'])){
                     echo'<ul>
                         <li><a href="logout.php"> Se déconnecter </a></li>
