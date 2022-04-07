@@ -1,7 +1,7 @@
 <?php 
     $db = null;
 
-    include('database.php');
+    include('login.php');
 
     $db = getConnexion();
 
@@ -26,7 +26,8 @@
             echo'Vos deux mots de passe ne concordent pas';
         } else {
             insert($db, $firstName, $lastName, $mail, $password);
-            header('location: login.php');
+            find_user($db, $mail, $password);
+            header('location: index.php');
         }
     }
 
