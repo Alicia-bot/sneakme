@@ -27,3 +27,5 @@
         </nav>
 
     </header>
+
+    <?php include "bot.html"?>
