@@ -11,7 +11,6 @@
     <link rel="stylesheet" type="text/css" href="css/botStyle.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link href="bot.html" rel="import" />
     <script src="https://kit.fontawesome.com/753aa87031.js" crossorigin="anonymous"></script>
 </head>
 <body>

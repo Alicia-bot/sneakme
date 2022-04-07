@@ -80,12 +80,10 @@ ul.menu {
 
 /*.menu li a:hover #sous-page li a {
     visibility: visible !important;
-    display: block;
 }
 
 #sous-page li a {
     visibility: hidden;
-    display: none;
 }*/
 
 .logo{
