@@ -34,11 +34,10 @@
             <input type="number" name="product_pointure" placeholder="pointure">
         </div>
     <h3>Ajouter une collaboration ?</h3>
-    <input type="select">
-       <nom>collaboration</nom>
+    <select>
        <option valeur="yes">Oui</option>
        <option valeur="no">Non</option>
-    </input>
+    </select>
     <div>
         <input type="file" name="aperçu_collab" accept=".jpg, .jpeg, .png" onchange="document.getElementById('preview').src = window.URL.createObjectURL(this.files[0])">
         <img id="preview_collab" alt="your image" width="100" height="100" />
