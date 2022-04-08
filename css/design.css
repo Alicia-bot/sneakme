@@ -50,7 +50,7 @@ section {
 .navigation{
     padding: 10px 30px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     box-shadow: 0px 3px 15px rgba(0,0,0,.3);
 }
 
