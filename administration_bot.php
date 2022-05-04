@@ -16,31 +16,31 @@
 
 <body>
     <!--Header-->
-    <?php include "header.php" ?>
+    <?php 
+        include "header.php";
+        include 'bot_form_administration.php';
+        $datas = find_bot($db);
+    ?>
 
     <h1>Modifier le bot</h1>
-    <div class="modif-photo">
-        <div>
-            <h3>Modifier la photo</h3>
-            <form method="post" enctype="multipart/form-data">
-                <input type="file" name="aperçu" accept=".jpg, .jpeg, .png" onchange="document.getElementById('preview').src = window.URL.createObjectURL(this.files[0])">
+    <form action="bot_form_administration.php" method='post' enctype="multipart/form-data">
+        <div class="modif-photo">
+            <div>
+                <label for="bot_name">Visuel</label>
+                <input type="file" name="sneak_file" accept=".jpg, .jpeg, .png" onchange="document.getElementById('preview').src = window.URL.createObjectURL(this.files[0])">
+            </div>
+            <img id="preview" alt="your image" width="800" height="500" />
         </div>
-        <img id="preview" alt="your image" width="800" height="500" />
-    </div>
-    <div>
-        <label for="bot_name">Nom du bot</label>
-        <input type="texte" name="bot_name" placeholder="Nom du chatbot">
-    </div>
-    <div>
-        <h3>Champs texte</h3>
-        <p>Au mot clé <input type="text" name="mot_cle" placeholder="votre mot clé">, votre chatbot pourra répondre <input type="text" name="reponse" placeholder="la réponse"></p>
-    </div>
-    <button type="submit">Ajouter un mot clé</button>
+        <div>
+            <label for="bot_name">Nom du bot</label>
+            <input type="text" name="bot_name" placeholder="Nom du chatbot" value=<?php echo($datas['name']); ?>>
+        </div>
+        <label for="bienvenue_text">Message de bienvenue</label>
+        <textarea name="bienvenue_text" placeholder="Votre texte de bienvenue"><?php echo($datas['welcome_message']); ?></textarea>
+        <label for="au_revoir_text">Message d'au revoir</label>
+        <textarea name="au_revoir_text" placeholder="Votre texte d'au revoir"><?php echo($datas['farewell_message']); ?></textarea>
+        <button type="submit">Actualiser le bot</button>
     </form>
-    <h3>Texte de bienvenue</h3>
-    <input type="text" name="bienvenue_text" placeholder="Votre texte de bienvenue">
-    <h3>Texte d'au revoir</h3>
-    <input type="text" name="au_revoir_text" placeholder="Votre texte d'au revoir">
 
     <!--Footer-->
     <?php include "footer.html" ?>
