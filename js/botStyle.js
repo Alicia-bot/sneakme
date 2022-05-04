@@ -3,7 +3,7 @@ chatBot.innerHTML = `
 <div id="expanded-chat-bot">
     <div id="messages">
         <div class="bot">
-            <p>Bienvenue ! Je suis sneak, et je suis ici pour faciliter votre achat de chaussure.</p>
+            <p id="welcome_message"></p>
         </div>
     </div>
 
@@ -22,13 +22,34 @@ chatBot.innerHTML = `
     </div>
 
     <div id="tooltip">
-        <img id="sneak" src="images/sneak.png" alt="">
+        <img id="sneak" alt="">
     </div>
 </div>`;
+
+$.ajax({
+    type: "GET",
+    url: "/SneakMeBot/ajax.php?action=image",
+    success: function (data) {
+        $('#sneak').attr('src', data.image);
+    },
+    error: function () {
+        $('#sneak').attr('src', 'images/sneak.png');
+    }
+});
 
 $('#expanded-chat-bot').hide();
 $('#reduced-chat-bot').click(function () { 
     $(this).hide();
+    $.ajax({
+        type: "GET",
+        url: "/SneakMeBot/ajax.php?action=welcome",
+        success: function (data) {
+            $('#welcome_message').text(data.welcome_message);
+        },
+        error: function () {
+            $('#welcome_message').text('Bienvenue ! Je suis sneak, et je suis ici pour faciliter votre achat de chaussure.');
+        }
+    });
     $('#expanded-chat-bot').show();
 });
 
@@ -285,20 +306,20 @@ function sayingGoodbye(value){
         for (let g = 0; g < isLeaving.length; g++) {
             if(splittedValue[i] == isLeaving[g]){
                 botAnswer = true;
-                // let text = "Merci à vous de nous avoir suivis, j'espère que la présentation vous aura plus, en espérant que ma voix ne soit pas trop désagréable pour vous. Maintenant il est temps pour vous de nous poser vos questions."
-                // const u = new SpeechSynthesisUtterance();
-                // allVoices = speechSynthesis.getVoices();
-                // u.voice = allVoices.filter(voice => voice.name === "Alex")[0];
-                // u.text = text;
-                // u.lang = "fr-FR";
-                // u.volume = 1; //0-1 interval
-                // u.rate = 1;
-                // u.pitch = 1; //0-2 interval
-                // speechSynthesis.speak(u);
                 const boxAnswer = document.createElement('div');
                 boxAnswer.classList.add("bot");
                 const answer = document.createElement('p');
-                answer.innerHTML = `Merci à vous pour votre visite, n'hésitez pas à visiter nos <a href="#">réseaux sociaux</a> si l'expérience vous a plu. En espérant bientôt vous revoir !`;
+                answer.setAttribute('id','farewell_message');
+                $.ajax({
+                    type: "GET",
+                    url: "/SneakMeBot/ajax.php?action=farewell",
+                    success: function (data) {
+                        $('#farewell_message').html(data.farewell_message);
+                    },
+                    error: function (data) {
+                        $('#farewell_message').html(`Merci à vous pour votre visite, n'hésitez pas à visiter nos <a href="#">réseaux sociaux</a> si l'expérience vous a plu. En espérant bientôt vous revoir !`);
+                    }
+                });
                 boxAnswer.append(answer);
                 messageBox.append(boxAnswer);
                 getDownWhenTalking();
