@@ -25,21 +25,32 @@
     <h1>Modifier le bot</h1>
     <form action="bot_form_administration.php" method='post' enctype="multipart/form-data">
         <div class="modif-photo">
-            <div>
-                <label for="sneak_file">Visuel</label>
-                <input type="file" name="sneak_file" accept=".jpg, .jpeg, .png" onchange="document.getElementById('preview').src = window.URL.createObjectURL(this.files[0])">
+
+            <label for="bot_name">Modifier la photo</label> <br>
+            <div class="wrapper">
+                <div class="file-upload">
+                    <input type="file" name="sneak_file" accept=".jpg, .jpeg, .png" onchange="document.getElementById('preview').src = window.URL.createObjectURL(this.files[0])">
+                    <i class="fa fa-plus"></i>
+                </div>
+            <div class="visuel-img">
+                <img id="preview" alt= "Visualisation de votre image"/>
             </div>
-            <img id="preview" alt="your image" width="800" height="500" />
+            </div>
         </div>
-        <div>
-            <label for="bot_name">Nom du bot</label>
+        <div class="modif-nom-bot">
+            <label for="bot_name">Nom du bot</label> <br>
             <input type="text" name="bot_name" placeholder="Nom du chatbot" value=<?php echo($datas['name']); ?>>
         </div>
-        <label for="bienvenue_text">Message de bienvenue</label>
-        <textarea name="bienvenue_text" placeholder="Votre texte de bienvenue"><?php echo($datas['welcome_message']); ?></textarea>
-        <label for="au_revoir_text">Message d'au revoir</label>
-        <textarea name="au_revoir_text" placeholder="Votre texte d'au revoir"><?php echo($datas['farewell_message']); ?></textarea>
-        <button type="submit">Valider</button>
+
+        <div class="textes-bot">
+        <label for="bienvenue_text">Message de bienvenue</label> <br>
+            <textarea name="bienvenue_text" placeholder="Votre texte de bienvenue"><?php echo($datas['welcome_message']); ?></textarea> <br>
+            <label for="au_revoir_text">Message d'au revoir</label> <br>
+            <textarea name="au_revoir_text" placeholder="Votre texte d'au revoir"><?php echo($datas['farewell_message']); ?></textarea>
+        </div>
+        <div class="flex">
+            <button id="actualiser-bot" type="submit">Actualiser le bot</button>
+        </div>
     </form>
 
     <!--Footer-->
