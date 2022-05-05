@@ -76,15 +76,17 @@
     }
 }
 
-
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 992px) {
+    .modif-nom-bot input, .textes-bot textarea {
+    margin: 0em 1em 0em 1em;
+    }
     .navigation {
         flex-direction: column;
     }
 
     .logo-lien {
         margin: auto;
-        padding-top: 1em;
+        padding-top: 1em;s
     }
 
     header hr, .column hr {

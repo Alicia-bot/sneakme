@@ -19,6 +19,12 @@ header{
     src: url('../fonts/QTypeSquare-Book.otf') format("opentype");
 }
 
+h1 {
+    color: #707070;
+    text-transform: uppercase;
+    font-size: 2.5em !important;
+}
+
 h1, h2, h3 {
     font-family: "Qtype";
     text-align: center;
@@ -270,6 +276,114 @@ ul.menu li:hover ul#sous-page {
         -webkit-transform: translateX(calc(-250px * 7));
         transform: translateX(calc(-250px * 7));
     }
+}
+
+/*Admin bot*/
+
+.wrapper{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+label {
+   font-family: "Qtype"; 
+   padding: 2em 1em 1em 1em;
+   color: #707070;
+   text-transform: uppercase;
+   font-size: 1.5em;
+}
+
+.file-upload {
+    height:400px;
+    width:400px;
+    border-radius: 0;
+    border: 2px solid #3078CC;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    overflow:hidden;
+    background-image: linear-gradient(to bottom, #FFFFFF 50%, #3078CC 50%);
+    background-size: 100% 200%;
+    transition: all 0.8s;
+    color: #000;
+    font-size:100px;
+}
+
+.file-upload:hover .fa-plus {
+    color: #fff;
+    opacity: 1;
+}
+
+.fa-plus {
+    color: #484949;
+    opacity: 0.5;
+}
+
+.file-upload input {
+    height:400px;
+    width:400px;
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
+    cursor:pointer;
+    z-index: 999;
+}
+
+.wrapper .file-upload:hover {
+    background-position: 0 -100%;
+    color: #2590EB;
+}
+
+.modif-nom-bot input, .textes-bot textarea {
+    border: 2px solid #3078CC;
+    border-radius: 20px;
+    padding: 0.5em;
+}
+
+.modif-nom-bot input {
+    margin: 0em 3em 0em 3em;
+    width: 95%;
+    height: 3em;
+}
+
+.textes-bot textarea {
+    width: 95%;
+    height: 200px;
+    margin: 0em 3em 0em 3em;
+}
+
+.visuel-img {
+    border: 2px solid #3078CC;
+    width: 1000px;
+    height: 400px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#preview {
+    width: auto;
+    height: auto;
+    max-height: 400px;
+    max-width: 1000px;
+}  
+
+#actualiser-bot {
+    color: #75BFDA;
+    padding: 15px;
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-family: "Qtype";
+    box-shadow: 1px 1px 5px #333;
+    margin: 3.5em 2em 2em 1em;
 }
 
 /*Bandeau*/
