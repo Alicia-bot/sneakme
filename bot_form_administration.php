@@ -18,7 +18,7 @@ if(!empty($_POST)){
 
     $target = 'images/'.$newname;
     move_uploaded_file( $_FILES['sneak_file']['tmp_name'], $target);
-    }
+}
 
 
 $bot = find_bot($db);

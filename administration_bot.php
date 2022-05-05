@@ -26,7 +26,7 @@
     <form action="bot_form_administration.php" method='post' enctype="multipart/form-data">
         <div class="modif-photo">
             <div>
-                <label for="bot_name">Visuel</label>
+                <label for="sneak_file">Visuel</label>
                 <input type="file" name="sneak_file" accept=".jpg, .jpeg, .png" onchange="document.getElementById('preview').src = window.URL.createObjectURL(this.files[0])">
             </div>
             <img id="preview" alt="your image" width="800" height="500" />
@@ -39,7 +39,7 @@
         <textarea name="bienvenue_text" placeholder="Votre texte de bienvenue"><?php echo($datas['welcome_message']); ?></textarea>
         <label for="au_revoir_text">Message d'au revoir</label>
         <textarea name="au_revoir_text" placeholder="Votre texte d'au revoir"><?php echo($datas['farewell_message']); ?></textarea>
-        <button type="submit">Actualiser le bot</button>
+        <button type="submit">Valider</button>
     </form>
 
     <!--Footer-->

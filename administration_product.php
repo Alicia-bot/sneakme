@@ -16,40 +16,30 @@
 
 <body>
     <!--Header-->
-    <?php include "header.php" ?>
-
-    <h1>Ajouter un produit</h1>
-    <div class="modif-photo">
-        <div>
-            <h3>Ajouter des photos</h3>
-            <form method="post" enctype="multipart/form-data">
-                <input type="file" name="aperçu" accept=".jpg, .jpeg, .png" onchange="document.getElementById('preview').src = window.URL.createObjectURL(this.files[0])">
+    <?php include "header.php";
+        include "product_form_administration.php";
+        $value = isset($_GET['edit']) ? find_one_shoe($db, $_GET['edit']) : null;
+        $action = !isset($_GET['edit']) ? 'product_form_administration.php' : 'product_form_administration.php?edit='.$_GET['edit'];
+    ?>
+    <form action=<?= $action ?> method='post' enctype="multipart/form-data">
+        <h1>Gérer un produit</h1>
+        <div class="modif-photo">
+            <div>
+                <label for="product_file">Visuel</label>
+                <input type="file" name="product_file" accept=".jpg, .jpeg, .png" onchange="document.getElementById('preview').src = window.URL.createObjectURL(this.files[0])">
+            </div>
+            <img id="preview" alt="your image" width="800" height="500" />
         </div>
-        <img id="preview" alt="your image" width="800" height="500" />
-    </div>
         <label for="bot_name">Ajouter des informations</label>
-        <input type="texte" name="product_title" placeholder="Titre du produit">
+        <input type="texte" name="product_title" placeholder="Titre du produit" value=<?php echo($value['name']); ?>>
         <div class="flex_admin_product">
-            <input type="number" name="product_price" placeholder="Prix">
-            <input type="number" name="product_pointure" placeholder="pointure">
+            <input type="number" name="product_price" placeholder="Prix (en euros)" step=".01" value=<?php echo($value['price']); ?>>
+            <input type="number" name="product_pointure" placeholder="pointure" step=".01" value=<?php echo($value['size']); ?>>
         </div>
-    <h3>Ajouter une collaboration ?</h3>
-    <select>
-       <option valeur="yes">Oui</option>
-       <option valeur="no">Non</option>
-    </select>
-    <div>
-        <input type="file" name="aperçu_collab" accept=".jpg, .jpeg, .png" onchange="document.getElementById('preview').src = window.URL.createObjectURL(this.files[0])">
-        <img id="preview_collab" alt="your image" width="100" height="100" />
-    </div>
-    <div>
-        <input type="file" name="aperçu_collab" accept=".jpg, .jpeg, .png" onchange="document.getElementById('preview').src = window.URL.createObjectURL(this.files[0])">
-        <img id="preview_collab" alt="your image" width="100" height="100" />
-    </div>
-        
-    <h3>Ajouter une description</h3>
-    <input type="text" name="description_text" placeholder="Description...">
-    <button type="submit">Ajouter</button>
+            
+        <h3>Ajouter une description</h3>
+        <textarea name="description" placeholder="Description"><?= $value['description'] ?></textarea>
+        <button type="submit">Valider</button>
     </form>
 
     <!--Footer-->

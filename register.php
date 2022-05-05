@@ -32,8 +32,8 @@
     }
 
      function insert($db, $firstName, $lastName, $mail, $password){
-        $request_string = "INSERT INTO `user` (`first_name`, `last_name`, `mail`, `password`) VALUES (?, ?, ?, ?)";
+        $request_string = "INSERT INTO `user` (`first_name`, `last_name`, `mail`, `password`, `role`) VALUES (?, ?, ?, ?, ?)";
         $request = $db->prepare($request_string);
-        $request->execute([$firstName, $lastName, $mail, $password]);
+        $request->execute([$firstName, $lastName, $mail, $password, 'user']);
     }
 ?>
