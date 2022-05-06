@@ -28,7 +28,7 @@
                 <label for="product_file">Visuel</label>
                 <input type="file" name="product_file" accept=".jpg, .jpeg, .png" onchange="document.getElementById('preview').src = window.URL.createObjectURL(this.files[0])">
             </div>
-            <img id="preview" alt="your image" width="800" height="500" />
+            <img id="preview" src=<?php echo($value['image'])?> alt="your image" width="800" height="500" />
         </div>
         <label for="bot_name">Ajouter des informations</label>
         <input type="texte" name="product_title" placeholder="Titre du produit" value=<?php echo($value['name']); ?>>

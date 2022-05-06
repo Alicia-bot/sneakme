@@ -23,7 +23,10 @@
     
     <table>
     <tr>
+        <th>Image</th>
         <th>Nom</th>
+        <th>Prix</th>
+        <th>Taille</th>
         <th>Description</th>
         <th>Actions</th>
     </tr>
@@ -31,9 +34,12 @@
         foreach ($results as $value) {
     ?>
     <tr style="text-align:center">
+        <td><img src=<?= $value["image"]; ?> alt="alt"></td>
         <td><?= $value["name"]; ?></td>
+        <td><?= $value["price"]; ?>€</td>
+        <td><?= $value["size"]; ?>€</td>
         <td><?= $value["description"]; ?></td>
-        <td><a href="administration_product.php?edit=<?= $value["id"]; ?>"><i class="fa-solid fa-pen-to-square"></i></a> <a href="product_form_administration.php?delete=<?= $value["id"]; ?>"><i class="fa-solid fa-trash-can"></i></a></td>
+        <td><a href="administration_product.php?edit=<?= $value["id"]; ?>"><i class="fa-solid fa-pen-to-square" title="Editer"></i></a> <a href="product_form_administration.php?delete=<?= $value["id"]; ?>"><i class="fa-solid fa-trash-can" title="Supprimer"></i></a></td>
     </tr>
     <?php 
         } 
