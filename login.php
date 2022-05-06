@@ -14,8 +14,10 @@ function find_user($db, $mail, $password){
     $row = $request->fetch(PDO::FETCH_ASSOC);
     if($mail === $row['mail'] && $password === $row['password']){
         session_start();
+        $_SESSION['logged'] = true;
         $_SESSION['userName'] = $row['first_name'];
         $_SESSION['userId'] = $row['id'];
+        $_SESSION['role'] = $row['role'];
         header('location: index.php');
     }
 }

@@ -22,17 +22,18 @@
         $datas = find_bot($db);
     ?>
 
-    <h1>Modifier le bot</h1>
+    <h1>Gestion du bot</h1>
     <form action="bot_form_administration.php" method='post' enctype="multipart/form-data">
         <div class="modif-photo">
-            <label for="bot_name">Modifier la photo</label> <br>
+
+            <label for="bot_name">Visuel</label> <br>
             <div class="wrapper">
                 <div class="file-upload">
-                    <input type="file" name="sneak_file" accept=".jpg, .jpeg, .png" onchange="document.getElementById('preview').src = window.URL.createObjectURL(this.files[0])">
+                    <input type="file" name="sneak_file" accept=".jpg, .jpeg, .png" onchange="document.getElementById('preview').src = window.URL.createObjectURL(this.files[0])" >
                     <i class="fa fa-plus"></i>
                 </div>
             <div class="visuel-img">
-                <img id="preview" alt= "Visualisation de votre image"/>
+                <img id="preview" src=<?php echo($datas['image'])?> alt= "Visualisation de votre image" name="preview"/>
             </div>
             </div>
         </div>
@@ -40,6 +41,7 @@
             <label for="bot_name">Nom du bot</label> <br>
             <input type="text" name="bot_name" placeholder="Nom du chatbot" value=<?php echo($datas['name']); ?>>
         </div>
+
         <div class="textes-bot">
         <label for="bienvenue_text">Message de bienvenue</label> <br>
             <textarea name="bienvenue_text" placeholder="Votre texte de bienvenue"><?php echo($datas['welcome_message']); ?></textarea> <br>
@@ -47,7 +49,7 @@
             <textarea name="au_revoir_text" placeholder="Votre texte d'au revoir"><?php echo($datas['farewell_message']); ?></textarea>
         </div>
         <div class="flex">
-            <button id="actualiser-bot" type="submit">Actualiser le bot</button>
+            <button id="actualiser-bot" type="submit">Valider</button>
         </div>
     </form>
 

@@ -18,7 +18,7 @@ if(!empty($_POST)){
 
     $target = 'images/'.$newname;
     move_uploaded_file( $_FILES['sneak_file']['tmp_name'], $target);
-    }
+}
 
 
 $bot = find_bot($db);
@@ -26,11 +26,10 @@ $bot = find_bot($db);
 if(isset($name) && !empty($name) && isset($welcome) && !empty($welcome) && isset($farewell) && !empty($farewell)){
     if(empty($bot)){
         insert($db, $target, $name, $welcome, $farewell);
-        header('location: index.php');
     } else {
         update($db, $target, $name, $welcome, $farewell);
-        header('location: index.php');
     }
+    header('location: index.php');
 }
 
 function find_bot($db){
