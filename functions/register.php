@@ -1,9 +1,6 @@
 <?php 
-    $db = null;
 
     include('login.php');
-
-    $db = getConnexion();
 
     $firstName = !empty($_POST) ? $_POST['name'] : null ;
     $lastName = !empty($_POST) ? $_POST['lastname'] : null ;

@@ -1,10 +1,7 @@
 <?php
-$db = null;
-
+session_start();
 include('database.php');
-
-$db = getConnexion();
-
+$_SESSION['random'] = 'hihi';
 if (isset($_POST['product_id'], $_POST['quantity']) && is_numeric($_POST['product_id']) && is_numeric($_POST['quantity'])) {
     $product_id = (int)$_POST['product_id'];
     $quantity = (int)$_POST['quantity'];
@@ -23,11 +20,7 @@ if (isset($_POST['product_id'], $_POST['quantity']) && is_numeric($_POST['produc
             $_SESSION['cart'] = array($product_id => $quantity);
         }
     }
-    header('location: cart.php');
-    exit;
+    header('location: ../index.php');
 }
 
-// function getNumberInCart(){
-//     $num_items_in_cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
-//     return $num_items_in_cart;
-// }
+?>

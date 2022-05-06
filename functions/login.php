@@ -5,7 +5,6 @@ include('database.php');
 $mail = !empty($_POST) ? $_POST['e-mail'] : null ;
 $password = !empty($_POST) ? $_POST['password'] : null ;
 
-$db = getConnexion();
 find_user($db, $mail, $password);
 function find_user($db, $mail, $password){
     $request_string = "SELECT * FROM user WHERE mail =:mail AND password =:password";

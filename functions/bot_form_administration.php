@@ -1,11 +1,6 @@
 <?php
 
-$db = null;
-
 include('database.php');
-
-$db = getConnexion();
-
 
 if(!empty($_POST)){
     $name = $_POST['bot_name'];

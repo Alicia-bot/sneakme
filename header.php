@@ -33,6 +33,10 @@
                 </li>
                 <hr>
                 <li id="cart"><i class="fas fa-shopping-cart"></i></li>
+                <?php
+                    $number = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
+                ?>
+                <span><?=$number?></span>
                
             </ul>
         </nav>

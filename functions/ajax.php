@@ -1,8 +1,7 @@
 <?php 
 
-$db = null; 
 include('database.php');
-$db = getConnexion();
+
 if(isset($_GET['action'])){
     switch ($_GET['action']) {
         case 'welcome':
