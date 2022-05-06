@@ -27,7 +27,7 @@
         } else {
             insert($db, $firstName, $lastName, $mail, $password);
             find_user($db, $mail, $password);
-            header('location: index.php');
+            header('location: ../index.php');
         }
     }
 

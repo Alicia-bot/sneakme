@@ -11,7 +11,7 @@
 </head>
 
 <body id="inscription">
-	<form id="connection" action="login.php" method='post'>
+	<form id="connection" action="functions/login.php" method='post'>
 		<div class="relative">
 			<a id="arrow" href="index.php" target="_self"><img src="images/inscription/arrow.png" alt="Flèche de retour"></a>
 		</div>
@@ -36,7 +36,7 @@
 		</div>
 </form>
 
-	<form id="registered" action="register.php" method='post'>
+	<form id="registered" action="functions/register.php" method='post'>
 		<div id="neumorphism-white">
 			<h2>Inscrivez-vous !</h2>
 			<div class="connect">

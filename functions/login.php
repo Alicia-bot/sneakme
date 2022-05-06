@@ -18,7 +18,7 @@ function find_user($db, $mail, $password){
         $_SESSION['userName'] = $row['first_name'];
         $_SESSION['userId'] = $row['id'];
         $_SESSION['role'] = $row['role'];
-        header('location: index.php');
+        header('location: ../index.php');
     }
 }
 

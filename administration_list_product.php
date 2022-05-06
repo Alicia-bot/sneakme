@@ -17,7 +17,7 @@
 <body>
     <!--Header-->
     <?php include "header.php"; 
-    include "product_form_administration.php";
+    include "functions/product_form_administration.php";
     $results = find_shoes($db);
     ?>
     
@@ -37,9 +37,9 @@
         <td><img src=<?= $value["image"]; ?> alt="alt"></td>
         <td><?= $value["name"]; ?></td>
         <td><?= $value["price"]; ?>€</td>
-        <td><?= $value["size"]; ?>€</td>
+        <td><?= $value["size"]; ?></td>
         <td><?= $value["description"]; ?></td>
-        <td><a href="administration_product.php?edit=<?= $value["id"]; ?>"><i class="fa-solid fa-pen-to-square" title="Editer"></i></a> <a href="product_form_administration.php?delete=<?= $value["id"]; ?>"><i class="fa-solid fa-trash-can" title="Supprimer"></i></a></td>
+        <td><a href="administration_product.php?edit=<?= $value["id"]; ?>"><i class="fa-solid fa-pen-to-square" title="Editer"></i></a> <a href="functions/product_form_administration.php?delete=<?= $value["id"]; ?>"><i class="fa-solid fa-trash-can" title="Supprimer"></i></a></td>
     </tr>
     <?php 
         } 

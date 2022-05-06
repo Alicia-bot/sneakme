@@ -17,7 +17,7 @@
                     if(isset($_SESSION['logged'])){
                         echo'<li><a href="#" class="nav-lien">Mon compte</a>
                             <ul id="sous-page">
-                            <li><a href="logout.php"> Se déconnecter </a></li>';
+                            <li><a href="functions/logout.php"> Se déconnecter </a></li>';
                             if(isset($_SESSION['role']) && $_SESSION['role'] == 'moderator'){
                                 echo'<li><a href="administration_bot.php"> Gérer le bot </a></li>
                                     <li><a href="administration_product.php"> Créer un produit</a></li>
@@ -32,7 +32,8 @@
                 ?>
                 </li>
                 <hr>
-                <li><a href="shop.php" id="panier"><img src="images/panier.png" alt="Panier"></a></li>
+                <li id="cart"><i class="fas fa-shopping-cart"></i></li>
+               
             </ul>
         </nav>
 

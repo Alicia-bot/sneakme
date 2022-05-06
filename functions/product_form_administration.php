@@ -27,13 +27,13 @@ if(isset($name) && !empty($name) && isset($price) && !empty($price) && isset($si
         $id = $_GET['edit'];
         update($db, $name, $price, $size, $target, $description, $id);
     }
-    header('location: administration_list_product.php');
+    header('location: ../administration_list_product.php');
 }
 
 if(isset($_GET['delete'])){
     $id = $_GET['delete'];
     delete($db, $id);
-    header('location: administration_list_product.php');
+    header('location: ../administration_list_product.php');
 }
 
 function find_shoes($db){
