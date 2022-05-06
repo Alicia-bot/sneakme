@@ -80,10 +80,15 @@
     .modif-nom-bot input, .textes-bot textarea {
     margin: 0em 1em 0em 1em;
     }
-    .navigation {
+
+    .menu {
         flex-direction: column;
     }
 
+    .menu li {
+        margin: 0.5em;
+    }
+    
     .logo-lien {
         margin: auto;
         padding-top: 1em;s
@@ -125,7 +130,7 @@
     }
 }
 
-@media screen and (min-width: 580px) {
+@media screen and (min-width: 992px) {
     .menu hr, footer .column hr {
         display: none;
         padding-top: 0.5em;
