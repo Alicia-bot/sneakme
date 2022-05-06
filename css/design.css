@@ -335,7 +335,7 @@ label {
     z-index: 999;
 }
 
-.wrapper .file-upload:hover {
+.file-upload:hover {
     background-position: 0 -100%;
     color: #2590EB;
 }
@@ -359,7 +359,6 @@ label {
 }
 
 .visuel-img {
-    border: 2px solid #3078CC;
     width: 1000px;
     height: 400px;
     display: flex;
@@ -375,14 +374,14 @@ label {
     max-width: 1000px;
 }  
 
-#actualiser-bot {
+#actualiser-bot, #ajouter-produit {
     color: #75BFDA;
-    padding: 15px;
+    padding: 1em 4em;
     background-color: #fff;
     border: none;
     border-radius: 20px;
     font-family: "Qtype";
-    box-shadow: 1px 1px 5px #333;
+    box-shadow: 1px 1px 10px 2px rgb(189 189 189 / 83%);
     margin: 3.5em 2em 2em 1em;
 }
 
@@ -562,6 +561,10 @@ label {
     text-align: center;
 }
 
+#neumorphism-blue #inscription h1 {
+    color: #fff !important;
+}
+
 #connection {
     background-color: #35558B;
     width: 100%;
@@ -726,4 +729,48 @@ footer .column span {
     color: #707070;
     margin: 10%;
     margin-top: 50px;
+}
+
+/*ADMIN CHAUSSURES*/
+
+/*Ajouter des infos*/
+
+#produit{
+    margin: 0em 1em 2em 2em;
+    padding: 0.5em 1em 0.5em 1.5em;
+    width: 96%;
+    border: 0;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 1px 1px 10px 2px rgb(189 189 189 / 83%);
+}
+
+#pointure{
+    width: 80%;
+    border: 0;
+    padding: 0.5em 1em 0.5em 1.5em;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 1px 1px 10px 2px rgb(189 189 189 / 83%);
+}
+
+#prix {
+    margin: 0em 1em 2em 2em;
+    padding: 0.5em 1em 0.5em 1.5em;
+    width: 15%;
+    border: 0;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 1px 1px 10px 2px rgb(189 189 189 / 83%);
+}
+
+#description{
+    width: 96%;
+    display: flex;
+    margin: auto;
+    height: 15em;
+    border: 0;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 1px 1px 10px 2px rgb(189 189 189 / 83%);
 }
