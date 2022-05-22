@@ -1,9 +1,6 @@
 <?php 
-    $db = null;
 
     include('login.php');
-
-    $db = getConnexion();
 
     $firstName = !empty($_POST) ? $_POST['name'] : null ;
     $lastName = !empty($_POST) ? $_POST['lastname'] : null ;
@@ -27,7 +24,7 @@
         } else {
             insert($db, $firstName, $lastName, $mail, $password);
             find_user($db, $mail, $password);
-            header('location: index.php');
+            header('location: ../index.php');
         }
     }
 

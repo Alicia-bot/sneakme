@@ -18,7 +18,7 @@
 
     <!--Header-->
     <?php include "header.php"; 
-    include "product_form_administration.php";
+    include "functions/product_form_administration.php";
     $results = find_shoes($db);
     ?>
 

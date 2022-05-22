@@ -18,12 +18,12 @@
     <!--Header-->
     <?php 
         include "header.php";
-        include 'bot_form_administration.php';
+        include 'functions/bot_form_administration.php';
         $datas = find_bot($db);
     ?>
 
     <h1>Gestion du bot</h1>
-    <form action="bot_form_administration.php" method='post' enctype="multipart/form-data">
+    <form action="functions/bot_form_administration.php" method='post' enctype="multipart/form-data">
         <div class="modif-photo">
 
             <label for="bot_name">Visuel</label> <br>

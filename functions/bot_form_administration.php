@@ -1,11 +1,6 @@
 <?php
 
-$db = null;
-
 include('database.php');
-
-$db = getConnexion();
-
 
 if(!empty($_POST)){
     $name = $_POST['bot_name'];
@@ -29,7 +24,7 @@ if(isset($name) && !empty($name) && isset($welcome) && !empty($welcome) && isset
     } else {
         update($db, $target, $name, $welcome, $farewell);
     }
-    header('location: index.php');
+    header('location: ../index.php');
 }
 
 function find_bot($db){

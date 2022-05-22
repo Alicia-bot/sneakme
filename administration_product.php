@@ -17,9 +17,9 @@
 <body>
     <!--Header-->
     <?php include "header.php";
-        include "product_form_administration.php";
+        include "functions/product_form_administration.php";
         $value = isset($_GET['edit']) ? find_one_shoe($db, $_GET['edit']) : null;
-        $action = !isset($_GET['edit']) ? 'product_form_administration.php' : 'product_form_administration.php?edit='.$_GET['edit'];
+        $action = !isset($_GET['edit']) ? 'functions/product_form_administration.php' : 'functions/product_form_administration.php?edit='.$_GET['edit'];
     ?>
 
     <form action="<?= $action ?>" method="post" enctype="multipart/form-data">

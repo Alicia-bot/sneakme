@@ -14,4 +14,7 @@
 
         return $db;
     }
+
+    $db = getConnexion();
+
 ?>

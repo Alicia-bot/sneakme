@@ -1,6 +1,6 @@
 <header>
         <?php
-            session_start();
+            if(!isset($_SESSION)) session_start();
         ?>
         <nav class="navigation">
             <a href="index.php" class="logo-lien">
@@ -17,7 +17,7 @@
                     if(isset($_SESSION['logged'])){
                         echo'<li><a href="#" class="nav-lien">Mon compte</a>
                             <ul id="sous-page">
-                            <li><a href="logout.php"> Se déconnecter </a></li>';
+                            <li><a href="functions/logout.php"> Se déconnecter </a></li>';
                             if(isset($_SESSION['role']) && $_SESSION['role'] == 'moderator'){
                                 echo'<li><a href="administration_bot.php"> Gérer le bot </a></li>
                                     <li><a href="administration_product.php"> Créer un produit</a></li>
@@ -32,7 +32,12 @@
                 ?>
                 </li>
                 <hr>
-                <li><a href="shop.php" id="panier"><img src="images/panier.png" alt="Panier"></a></li>
+                <li id="cart"><a href="shopping_cart.php"><i class="fas fa-shopping-cart"></i></a></li>
+                <?php
+                    $number = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
+                ?>
+                <span><?=$number?></span>
+               
             </ul>
         </nav>
 

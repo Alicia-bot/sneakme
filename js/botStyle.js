@@ -28,7 +28,7 @@ chatBot.innerHTML = `
 
 $.ajax({
     type: "GET",
-    url: "/SneakMeBot/ajax.php?action=image",
+    url: "/SneakMeBot/functions/ajax.php?action=image",
     success: function (data) {
         $('#sneak').attr('src', data.image);
     },
@@ -42,7 +42,7 @@ $('#reduced-chat-bot').click(function () {
     $(this).hide();
     $.ajax({
         type: "GET",
-        url: "/SneakMeBot/ajax.php?action=welcome",
+        url: "/SneakMeBot/functions/ajax.php?action=welcome",
         success: function (data) {
             $('#welcome_message').text(data.welcome_message);
         },
@@ -312,7 +312,7 @@ function sayingGoodbye(value){
                 answer.setAttribute('id','farewell_message');
                 $.ajax({
                     type: "GET",
-                    url: "/SneakMeBot/ajax.php?action=farewell",
+                    url: "/SneakMeBot/functions/ajax.php?action=farewell",
                     success: function (data) {
                         $('#farewell_message').html(data.farewell_message);
                     },
