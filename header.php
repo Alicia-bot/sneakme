@@ -1,6 +1,6 @@
 <header>
         <?php
-            session_start();
+            if(!isset($_SESSION)) session_start();
         ?>
         <nav class="navigation">
             <a href="index.php" class="logo-lien">
@@ -32,7 +32,7 @@
                 ?>
                 </li>
                 <hr>
-                <li id="cart"><i class="fas fa-shopping-cart"></i></li>
+                <li id="cart"><a href="shopping_cart.php"><i class="fas fa-shopping-cart"></i></a></li>
                 <?php
                     $number = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
                 ?>
