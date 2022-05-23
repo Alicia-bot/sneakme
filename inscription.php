@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
+<?php
+if(isset($_SESSION['logged'])){
+	header('Location: index.php');
+}
+?>
+
 <body id="inscription">
 	<form id="connection" action="functions/login.php" method='post'>
 		<div class="relative">

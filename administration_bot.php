@@ -20,6 +20,9 @@
         include "header.php";
         include 'functions/bot_form_administration.php';
         $datas = find_bot($db);
+        if(!isset($_SESSION['logged']) || $_SESSION['role'] != 'moderator'){
+            header('Location: index.php');
+        }
     ?>
 
     <h1>Gestion du bot</h1>
