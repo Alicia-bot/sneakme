@@ -19,6 +19,9 @@
     <?php include "header.php"; 
     include "functions/product_form_administration.php";
     $results = find_shoes($db);
+    if(!isset($_SESSION['logged']) || $_SESSION['role'] != 'moderator'){
+        header('Location: index.php');
+    }
     ?>
     
     <table>

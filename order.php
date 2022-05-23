@@ -17,6 +17,9 @@
 <body>
 <?php
     include "header.php"; 
+    if(!isset($_SESSION['logged'])){
+        header('Location: index.php');
+    }
 ?>
 <div class="placeorder content-wrapper">
     <h1>Merci pour votre commande</h1>

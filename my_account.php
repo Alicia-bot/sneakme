@@ -17,7 +17,11 @@
 <body>
 
     <!--Header-->
-    <?php include "header.php" ?>
+    <?php include "header.php"; 
+    if(!isset($_SESSION['logged'])){
+        header('Location: index.php');
+    }
+    ?>
 
     <!--Footer-->
     <?php include "footer.html" ?>

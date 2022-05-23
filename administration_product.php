@@ -20,6 +20,9 @@
         include "functions/product_form_administration.php";
         $value = isset($_GET['edit']) ? find_one_shoe($db, $_GET['edit']) : null;
         $action = !isset($_GET['edit']) ? 'functions/product_form_administration.php' : 'functions/product_form_administration.php?edit='.$_GET['edit'];
+        if(!isset($_SESSION['logged']) || $_SESSION['role'] != 'moderator'){
+            header('Location: index.php');
+        }
     ?>
 
     <form action="<?= $action ?>" method="post" enctype="multipart/form-data">
