@@ -42,7 +42,7 @@
         </div>
         <div class="modif-nom-bot">
             <label for="bot_name">Nom du bot</label> <br>
-            <input type="text" name="bot_name" placeholder="Nom du chatbot" value=<?php echo($datas['name']); ?>>
+            <input type="text" name="bot_name" placeholder="Nom du chatbot" value="<?php echo($datas['name']); ?>">
         </div>
 
         <div class="textes-bot">

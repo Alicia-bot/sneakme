@@ -8,12 +8,16 @@ if(!empty($_POST)){
     $size = $_POST['product_pointure'];
     $description = $_POST['description'];
 
-    $info = pathinfo($_FILES['product_file']['name']);
-    $ext = $info['extension']; // get the extension of the file
-    $newname = $_FILES['product_file']['name'].".".$ext; 
-
-    $target = '../images/'.$newname;
-    move_uploaded_file( $_FILES['product_file']['tmp_name'], $target);
+    if($_FILES['product_file']['name'] && !$_GET['edit']){
+        $info = pathinfo($_FILES['product_file']['name']);
+        $ext = $info['extension']; // get the extension of the file
+        $newname = $_FILES['product_file']['name'].".".$ext; 
+    
+        $target = '../images/'.$newname;
+        move_uploaded_file( $_FILES['product_file']['tmp_name'], $target);
+    } else {
+        $newname = find_one_shoe($db, $_GET['edit'])['image'];
+    }
 }
 if(isset($name) && !empty($name) && isset($price) && !empty($price) && isset($size) && !empty($size) && isset($description) && !empty($description)){
     if(!isset($_GET['edit'])){

@@ -2,26 +2,27 @@
 
 include('database.php');
 
+$bot = find_bot($db);
+
 if(!empty($_POST)){
     $name = isset($_POST['bot_name']) && !empty($_POST['bot_name']) ? $_POST['bot_name'] : null;
     $welcome = isset($_POST['bienvenue_text']) && !empty($_POST['bienvenue_text']) ? $_POST['bienvenue_text'] : null;
     $farewell = isset($_POST['au_revoir_text']) && !empty($_POST['au_revoir_text']) ? $_POST['au_revoir_text'] : null;
 
-    if (isset($_FILES) && !empty($_FILES['sneak_file']['name'])) {
+    if (!empty($_FILES['sneak_file']['name'])) {
         $info = pathinfo($_FILES['sneak_file']['name']);
         $ext = $info['extension']; // get the extension of the file
         $newname = "newSneak.".$ext; 
     
         $target = '../images/'.$newname;
         move_uploaded_file( $_FILES['sneak_file']['tmp_name'], $target);
-    } else {
+    } else if(empty($_FILES['sneak_file']['name']) && $bot != null){
+        $newname = $bot['image'];
+    }else {
         $newname = null;
     }
     
 }
-
-
-$bot = find_bot($db);
 
 if($_POST){
     if(empty($bot)){
