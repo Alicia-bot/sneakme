@@ -26,29 +26,29 @@ $value = find_one_shoe($db, $_GET['product']);
 	<section class="flex">
 		<div class="flex-1">
 			<div class="first-product">
-				<img src=<?php echo($value['image'])?> alt="Photo Air Jordan 1 Retro High Cactus Jack">
+				<img src=<?php echo('images/'.$value['image'])?> alt="Photo Air Jordan 1 Retro High Cactus Jack">
 			</div>
 		    <ul id="gallery">
 		        <li>
-		            <img src=<?php echo($value['image'])?> alt="Photo <?php echo($value['name'])?>" />
+		            <img src=<?php echo('images/'.$value['image'])?> alt="Photo <?php echo($value['name'])?>" />
 		        </li>
 		        <li>
-		            <img src=<?php echo($value['image'])?> alt="Photo 2 <?php echo($value['name'])?>" />
+		            <img src=<?php echo('images/'.$value['image'])?> alt="Photo 2 <?php echo($value['name'])?>" />
 		        </li>
 		        <li>
-		            <img src=<?php echo($value['image'])?> alt="Photo 3 <?php echo($value['name'])?>" />
+		            <img src=<?php echo('images/'.$value['image'])?> alt="Photo 3 <?php echo($value['name'])?>" />
 		        </li>
 		        <li>
-		            <img src=<?php echo($value['image'])?> alt="Photo 4 <?php echo($value['name'])?>" />
+		            <img src=<?php echo('images/'.$value['image'])?> alt="Photo 4 <?php echo($value['name'])?>" />
 		        </li>
 		        <li>
-		            <img src=<?php echo($value['image'])?> alt="Photo <?php echo($value['name'])?>" />
+		            <img src=<?php echo('images/'.$value['image'])?> alt="Photo <?php echo($value['name'])?>" />
 		        </li>
 		        <li>
-		            <img src=<?php echo($value['image'])?> alt="Photo <?php echo($value['name'])?>" />
+		            <img src=<?php echo('images/'.$value['image'])?> alt="Photo <?php echo($value['name'])?>" />
 		        </li>
 		        <li>
-		            <img src=<?php echo($value['image'])?> alt="Photo <?php echo($value['name'])?>" />
+		            <img src=<?php echo('images/'.$value['image'])?> alt="Photo <?php echo($value['name'])?>" />
 		        </li>
 		    </ul>
 		</div>

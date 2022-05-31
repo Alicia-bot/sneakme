@@ -33,7 +33,7 @@
             foreach ($results as $value) {
             ?>
                 <a href="product_sheet.php?product=<?php echo($value['id'])?>">
-                    <img src=<?php echo($value['image'])?> alt=<?php echo($value['name'])?>>
+                    <img src=<?php echo('images/'.$value['image'])?> alt=<?php echo($value['name'])?>>
                     <br>
                     <span><?php echo($value['name'])?></span>
                     <p><?php echo($value['price'])?>€</p>
