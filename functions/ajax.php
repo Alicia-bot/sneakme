@@ -10,7 +10,6 @@ if(isset($_GET['action'])){
             $request->execute();
             $row = $request->fetch(PDO::FETCH_ASSOC);
             header('content-type:application/json');
-            var_dump($row);die;
             if($row && $row['welcome_message'] != null) echo(json_encode($row));
         break;
 
