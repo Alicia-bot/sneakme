@@ -31,6 +31,7 @@
         <th>Prix</th>
         <th>Taille</th>
         <th>Description</th>
+        <th>Genre</th>
         <th>Actions</th>
     </tr>
     <?php
@@ -42,6 +43,7 @@
         <td><?= $value["price"]; ?>€</td>
         <td><?= $value["size"]; ?></td>
         <td><?= $value["description"]; ?></td>
+        <td><?= $value["gender"]; ?></td>
         <td><a href="administration_product.php?edit=<?= $value["id"]; ?>"><i class="fa-solid fa-pen-to-square" title="Editer"></i></a> <a href="functions/product_form_administration.php?delete=<?= $value["id"]; ?>"><i class="fa-solid fa-trash-can" title="Supprimer"></i></a></td>
     </tr>
     <?php 
