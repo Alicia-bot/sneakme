@@ -42,7 +42,7 @@
                 <tr>
                     <td class="img">
                         <a href="product_sheet.php?product=<?php echo($product['id'])?>">
-                            <img src="<?=$product['image']?>" alt="<?=$product['name']?>">
+                            <img src="images/<?=$product['image']?>" alt="<?=$product['name']?>">
                         </a>
                     </td>
                     <td>

@@ -36,10 +36,10 @@
             </div>
         </div>
             <div class="visuel-img">
-                <img id="preview" src="<?php echo($value['image'])?>" alt= "Visualisation de votre image"/>
+                <img id="preview" src="images/<?php echo($value['image'])?>" alt= "Visualisation de votre image"/>
             </div>
                 <label for="bot_name">Ajouter des informations</label> <br>
-                <input id="produit" type="texte" name="product_title" placeholder="Titre du produit" value=<?php echo($value['name']); ?>>
+                <input id="produit" type="texte" name="product_title" placeholder="Titre du produit" value="<?php echo($value['name']); ?>">
                 <div>
                     <input id="prix" type="number" name="product_price" placeholder="Prix (en euros)" step=".01" value=<?php echo($value['price']); ?>>
                     <input id="pointure" type="number" name="product_pointure" placeholder="pointure" step=".01" value=<?php echo($value['size']); ?>>

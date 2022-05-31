@@ -15,7 +15,7 @@
                 <hr>
                 <?php 
                     if(isset($_SESSION['logged'])){
-                        echo'<li><a href="#" class="nav-lien">Mon compte</a>
+                        echo'<li><a href="#" class="nav-lien">'.$_SESSION['userName'].'</a>
                             <ul id="sous-page">';
                             if(isset($_SESSION['role']) && $_SESSION['role'] == 'moderator'){
                                 echo'<li><a href="administration_bot.php"> Gérer le bot </a></li>
