@@ -64,7 +64,7 @@
         if (!empty($_SESSION['cart'])){
         ?>
         <div class="subtotal">
-            <span class="text">Toal à payer</span>
+            <span class="text">Total à payer</span>
             <span class="price"><?=$subtotal?>&euro;</span>
         </div>
         <div class="buttons">
