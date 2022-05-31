@@ -110,14 +110,22 @@ ul.menu li:hover ul#sous-page {
     text-align: center;
 }
 
-.navigation #panier img {
-    height: 40px;
+#cart, #panier span{
+    padding: 5px;
+    color: #fff;
+}
+
+.navigation #cart a i {
+    color: #fff;
+    height: 20px;
     width: auto;
 }
 
 #panier {
-        padding: 20px 15px;
-
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 20px 15px;
     border-radius: 50%;
     background: #484949;
     box-shadow: inset 16px 16px 31px #3d3e3e,

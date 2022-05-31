@@ -32,12 +32,15 @@
                 ?>
                 </li>
                 <hr>
-                <li id="cart"><a href="shopping_cart.php"><i class="fas fa-shopping-cart"></i></a></li>
-                <?php
-                    $number = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
-                ?>
-                <span><?=$number?></span>
-               
+                <div id="panier">
+                    <li id="cart">
+                        <a href="shopping_cart.php"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
+                    <?php
+                        $number = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
+                    ?>
+                    <span><?=$number?></span>
+                </div>
             </ul>
         </nav>
 
