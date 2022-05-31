@@ -36,7 +36,7 @@
                     <i class="fa fa-plus"></i>
                 </div>
             <div class="visuel-img">
-                <img id="preview" src=<?php echo($datas['image'])?> alt= "Visualisation de votre image" name="preview"/>
+                <img id="preview" src=<?php echo('images/'.$datas['image'])?> alt= "Visualisation de votre image" name="preview"/>
             </div>
             </div>
         </div>

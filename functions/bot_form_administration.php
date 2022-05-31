@@ -3,26 +3,31 @@
 include('database.php');
 
 if(!empty($_POST)){
-    $name = $_POST['bot_name'];
-    $welcome = $_POST['bienvenue_text'];
-    $farewell = $_POST['au_revoir_text'];
+    $name = isset($_POST['bot_name']) && !empty($_POST['bot_name']) ? $_POST['bot_name'] : null;
+    $welcome = isset($_POST['bienvenue_text']) && !empty($_POST['bienvenue_text']) ? $_POST['bienvenue_text'] : null;
+    $farewell = isset($_POST['au_revoir_text']) && !empty($_POST['au_revoir_text']) ? $_POST['au_revoir_text'] : null;
 
-    $info = pathinfo($_FILES['sneak_file']['name']);
-    $ext = $info['extension']; // get the extension of the file
-    $newname = "newSneak.".$ext; 
-
-    $target = 'images/'.$newname;
-    move_uploaded_file( $_FILES['sneak_file']['tmp_name'], $target);
+    if (isset($_FILES) && !empty($_FILES['sneak_file']['name'])) {
+        $info = pathinfo($_FILES['sneak_file']['name']);
+        $ext = $info['extension']; // get the extension of the file
+        $newname = "newSneak.".$ext; 
+    
+        $target = '../images/'.$newname;
+        move_uploaded_file( $_FILES['sneak_file']['tmp_name'], $target);
+    } else {
+        $newname = null;
+    }
+    
 }
 
 
 $bot = find_bot($db);
 
-if(isset($name) && !empty($name) && isset($welcome) && !empty($welcome) && isset($farewell) && !empty($farewell)){
+if($_POST){
     if(empty($bot)){
-        insert($db, $target, $name, $welcome, $farewell);
+        insert($db, $newname, $name, $welcome, $farewell);
     } else {
-        update($db, $target, $name, $welcome, $farewell);
+        update($db, $newname, $name, $welcome, $farewell);
     }
     header('location: ../index.php');
 }
