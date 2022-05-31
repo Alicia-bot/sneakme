@@ -30,14 +30,18 @@ $.ajax({
     type: "GET",
     url: "/SneakMeBot/functions/ajax.php?action=image",
     success: function (data) {
-        $('#sneak').attr('src', data.image);
+        $('#sneak').attr('src', 'images/'+data.image);
+        $('#expanded-chat-bot').attr('id', 'expanded-chat-bot-changed');
     },
     error: function () {
         $('#sneak').attr('src', 'images/sneak.png');
+        $('#expanded-chat-bot-changed').attr('id', 'expanded-chat-bot');
     }
 });
 
 $('#expanded-chat-bot').hide();
+$('#expanded-chat-bot-changed').hide();
+
 $('#reduced-chat-bot').click(function () { 
     $(this).hide();
     $.ajax({
@@ -51,10 +55,12 @@ $('#reduced-chat-bot').click(function () {
         }
     });
     $('#expanded-chat-bot').show();
+    $('#expanded-chat-bot-changed').show();
 });
 
 $('.reduce').click(function () { 
     $('#expanded-chat-bot').hide();
+    $('#expanded-chat-bot-changed').hide();
     $('#reduced-chat-bot').show();
 });
 
@@ -289,7 +295,7 @@ function renderAnswer(sneakers, brandList, sizeList){
     } else if(sneakersAmount == 1){
         answer.innerHTML = `J\'ai trouvé une paire chaussure correspondant à la demande ${requestedSneaker} , la voici :`
     }else {
-        answer.innerHTML = `J\'ai trouvé ${sneakersAmount} paires de chaussures correspondants à votre demande de ${requestedSneaker} , que vous pourrez retrouver <a href="https://www.twitch.tv/directory/all" class="logo-lien">sur cette page</a>.`
+        answer.innerHTML = `J\'ai trouvé ${sneakersAmount} paires de chaussures correspondants à votre demande de ${requestedSneaker} , que vous pourrez retrouver <a href="#" class="logo-lien">sur cette page</a>.`
     } 
     if(sneakersAmount < 2){
         answer.append(list);

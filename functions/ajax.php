@@ -10,7 +10,8 @@ if(isset($_GET['action'])){
             $request->execute();
             $row = $request->fetch(PDO::FETCH_ASSOC);
             header('content-type:application/json');
-            if($row) echo(json_encode($row));
+            var_dump($row);die;
+            if($row && $row['welcome_message'] != null) echo(json_encode($row));
         break;
 
         case 'farewell':
@@ -19,7 +20,7 @@ if(isset($_GET['action'])){
             $request->execute();
             $row = $request->fetch(PDO::FETCH_ASSOC);
             header('content-type:application/json');
-            if($row) echo(json_encode($row));
+            if($row && $row['farewell_message']) echo(json_encode($row));
         break;
 
         case 'image':
@@ -28,7 +29,7 @@ if(isset($_GET['action'])){
             $request->execute();
             $row = $request->fetch(PDO::FETCH_ASSOC);
             header('content-type:application/json');
-            if($row) echo(json_encode($row));
+            if($row && $row['image']) echo(json_encode($row));
         break;
         
         default:
