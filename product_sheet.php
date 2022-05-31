@@ -26,7 +26,7 @@ $value = find_one_shoe($db, $_GET['product']);
 	<section class="flex">
 		<div class="flex-1">
 			<div class="first-product">
-				<img src=<?php echo('images/'.$value['image'])?> alt="Photo Air Jordan 1 Retro High Cactus Jack">
+				<img src=<?php echo('images/'.$value['image'])?> alt="<?php echo($value['name'])?>">
 			</div>
 		    <ul id="gallery">
 		        <li>
@@ -66,7 +66,7 @@ $value = find_one_shoe($db, $_GET['product']);
 					<a href="#" class="btn"><?php echo($value['size'])?></a>
 				</div>
 				<div class="choice-product">
-					<img src=<?php echo($value['image'])?> alt="Air Jordan Marron">
+					<img src=<?php echo('images/'.$value['image'])?> alt="<?php echo($value['name'])?>">
 				</div>
 			</div>
 			<div id="price-product">
