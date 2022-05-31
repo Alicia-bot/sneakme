@@ -19,7 +19,7 @@
     <!--Header-->
     <?php include "header.php"; 
     include "functions/product_form_administration.php";
-    $results = find_shoes($db);
+    $results = find_men_shoes($db);
     ?>
 
     <h1>Homme</h1>

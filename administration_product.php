@@ -40,6 +40,18 @@
             </div>
                 <label for="bot_name">Ajouter des informations</label> <br>
                 <input id="produit" type="texte" name="product_title" placeholder="Titre du produit" value="<?php echo($value['name']); ?>">
+                <select name="gender" id="gender">
+                    <?php
+                    // short way to init the select input
+                        foreach ($gender_array as $gender) {
+                            // case edit shoe, find the selected one
+                        $selected = $value['gender'] == $gender ? 'selected' : null;
+                    ?>
+                        <option value="<?=$gender?>" <?=$selected?>><?=$gender?></option>
+                    <?php 
+                        } 
+                    ?>
+                </select>
                 <div>
                     <input id="prix" type="number" name="product_price" placeholder="Prix (en euros)" step=".01" value=<?php echo($value['price']); ?>>
                     <input id="pointure" type="number" name="product_pointure" placeholder="pointure" step=".01" value=<?php echo($value['size']); ?>>
