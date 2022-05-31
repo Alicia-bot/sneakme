@@ -37,7 +37,7 @@
         foreach ($results as $value) {
     ?>
     <tr style="text-align:center">
-        <td><img src=<?= $value["image"]; ?> alt="alt"></td>
+        <td><img src='images/<?= $value["image"]; ?>' alt="alt"></td>
         <td><?= $value["name"]; ?></td>
         <td><?= $value["price"]; ?>€</td>
         <td><?= $value["size"]; ?></td>

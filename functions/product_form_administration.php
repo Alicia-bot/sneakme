@@ -12,15 +12,15 @@ if(!empty($_POST)){
     $ext = $info['extension']; // get the extension of the file
     $newname = $_FILES['product_file']['name'].".".$ext; 
 
-    $target = 'images/'.$newname;
+    $target = '../images/'.$newname;
     move_uploaded_file( $_FILES['product_file']['tmp_name'], $target);
 }
 if(isset($name) && !empty($name) && isset($price) && !empty($price) && isset($size) && !empty($size) && isset($description) && !empty($description)){
     if(!isset($_GET['edit'])){
-        insert($db, $name, $price, $size, $target, $description);
+        insert($db, $name, $price, $size, $newname, $description);
     } else {
         $id = $_GET['edit'];
-        update($db, $name, $price, $size, $target, $description, $id);
+        update($db, $name, $price, $size, $newname, $description, $id);
     }
     header('location: ../administration_list_product.php');
 }
@@ -48,16 +48,16 @@ function find_one_shoe($db, $id){
     return $row;
 }
 
-function insert($db, $name, $price, $size, $target, $description){
+function insert($db, $name, $price, $size, $newname, $description){
     $request_string = "INSERT INTO `shoes` (`name`, `price`, `size`, `image`, `description`) VALUES (?, ?, ?, ?, ?)";
     $request = $db->prepare($request_string);
-    $request->execute([$name, $price, $size, $target, $description]);
+    $request->execute([$name, $price, $size, $newname, $description]);
 }
 
-function update($db, $name, $price, $size, $target, $description, $id){
-    $request_string = "UPDATE shoes SET name = '$name', price = '$price', size = '$size', image = '$target', description = '$description' WHERE id = '$id'";
+function update($db, $name, $price, $size, $newname, $description, $id){
+    $request_string = "UPDATE shoes SET name = '$name', price = '$price', size = '$size', image = '$newname', description = '$description' WHERE id = '$id'";
     $request = $db->prepare($request_string);
-    $request->execute([$name, $name, $price, $size, $target, $description]);
+    $request->execute([$name, $name, $price, $size, $newname, $description]);
 }
 
 function delete($db, $id){
